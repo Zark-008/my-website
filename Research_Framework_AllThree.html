@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>三份深度调研框架 — FocusReset 调研工作台</title>
+<style>
+:root{--blue:#2E75B6;--dark:#1a3a5c;--text:#2d2d2d;--muted:#666;--bg:#fafbfc;--card:#fff;--border:#e2e6ea;--accent:#f0f4f8;--red:#c0392b;--green:#27ae60}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:14.5px;line-height:1.72;color:var(--text);background:var(--bg)}
+.cover{background:linear-gradient(135deg,#1a3a5c 0%,#2E75B6 100%);color:#fff;padding:56px 40px 48px;text-align:center}
+.cover h1{font-size:1.8em;font-weight:800;letter-spacing:-0.02em}
+.cover .subtitle{font-size:1em;opacity:.85;margin-top:8px;margin-bottom:20px}
+.cover .meta span{display:inline-block;margin:4px 12px;font-size:.85em;opacity:.75}
+.container{max-width:960px;margin:0 auto;padding:32px 28px 56px}
+h2{font-size:1.35em;color:var(--blue);border-bottom:2px solid var(--border);padding-bottom:5px;margin:48px 0 14px}
+h3{font-size:1.08em;color:#444;margin:24px 0 8px;font-weight:700}
+.topic-tag{display:inline-block;padding:2px 10px;border-radius:12px;font-size:.78em;font-weight:700;margin-right:6px}
+.tag-scooter{background:#e8f4fd;color:#2E75B6}.tag-trike{background:#fdf2e8;color:#e67e22}.tag-glass{background:#e8fdf0;color:#27ae60}
+.module{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin:20px 0}
+.module h4{font-size:1em;color:var(--dark);margin-bottom:8px}
+.module .q-list{margin:0;padding:0;list-style:none}
+.module .q-list li{padding:6px 0 6px 18px;border-bottom:1px solid #f0f0f0;position:relative}
+.module .q-list li:before{content:"▸";position:absolute;left:0;color:var(--blue);font-size:.8em}
+.module .q-list li:last-child{border-bottom:none}
+.source-tag{display:inline-block;background:var(--accent);padding:1px 8px;border-radius:4px;font-size:.78em;color:var(--muted);margin-left:6px}
+.note{background:#fffbf0;border:1px solid #f0e0a0;border-radius:6px;padding:10px 16px;margin:12px 0;font-size:.9em}
+.section-divider{border:none;border-top:3px solid var(--border);margin:48px 0}
+.toc ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.toc li{padding:4px 14px;background:var(--card);border:1px solid var(--border);border-radius:16px;font-size:.88em}
+@media print{.cover{padding:28px 20px}.container{max-width:100%;padding:16px 20px}body{font-size:10pt}.module{break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header class="cover">
+  <h1>深度调研框架 · 全部研究问题清单</h1>
+  <p class="subtitle">三大主题 × 31个模块 × 180+个研究问题 | 全线上 · AI驱动 · 公开数据</p>
+  <div class="meta"><span>调研引擎：Claude + DeepSeek + 网络搜索</span><span>2026年6月</span><span>纯线上 · 零线下</span></div>
+</header>
+
+<div class="container">
+
+<nav class="toc"><ul>
+  <li><a href="#scooter">🛴 电动滑板车出海美国</a></li>
+  <li><a href="#trike">🛵 电动三轮车出海美国</a></li>
+  <li><a href="#glass">🏭 美国玻璃容器建厂</a></li>
+</ul></nav>
+
+<!-- ═══════════════════════════════════════════ -->
+<hr class="section-divider" id="scooter">
+<h2><span class="topic-tag tag-scooter">主题一</span> 电动滑板车出海美国 — 9模块 · 55个研究问题</h2>
+
+<div class="module">
+<h4>M1. 市场规模与增长</h4>
+<ol class="q-list">
+  <li>美国电动滑板车2024年市场规模($M)和出货量(万台)是多少？ <span class="source-tag">Grand View / Mordor Intelligence</span></li>
+  <li>2024-2029年CAGR预测？不同机构(Grand View/Mordor/Allied)的预测差异及原因？</li>
+  <li>按通勤/性能/便携/越野四细分的市场规模和增速各是多少？</li>
+  <li>美国各州渗透率差异——哪些州是核心市场？<span class="source-tag">Amazon区域销售分布 + Google Trends按州</span></li>
+  <li>全球市场对比：美国 vs 欧洲 vs 亚太的市场规模和增速对比？</li>
+  <li>共享滑板车(Lime/Bird/Spin)对个人购买市场的促进或替代效应？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M2. 关税与贸易壁垒</h4>
+<ol class="q-list">
+  <li>HTS编码8711.60.00当前Section 301附加税率？2024年5月拜登新关税是否已生效？<span class="source-tag">USTR官网</span></li>
+  <li>滑板车电池(锂电)是否有单独的关税条目和额外税率？</li>
+  <li>301排除清单是否曾覆盖滑板车？恢复可能性的判断依据？</li>
+  <li>如果关税升至50%，中国直发模式的利润还剩多少？<span class="source-tag">敏感性测算</span></li>
+  <li>越南/泰国/墨西哥组装规避原产地的法律可行性？需要多少本地附加值比例？</li>
+  <li>美国对中国电动车/电池的301复审时间表？下一次USTR听证会在什么时候？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M3. 法规认证</h4>
+<ol class="q-list">
+  <li>UL 2272认证的具体测试项目、费用区间($15K-30K?)、周期(8-14周)? <span class="source-tag">UL官网</span></li>
+  <li>UL 2849(e-Bike)是否覆盖电动滑板车？两个认证的关系是什么？</li>
+  <li>FCC Part 15(电磁兼容)对带蓝牙滑板车的测试要求？</li>
+  <li>CPSC对电动滑板车的监管框架？是否强制第三方检测？<span class="source-tag">CPSC法规数据库</span></li>
+  <li>加州、纽约、德州、佛州四州的道路法规差异——是否需要驾照/上牌/限速/人行道限制？<span class="source-tag">各州DMV网站</span></li>
+  <li>加州Proposition 65对滑板车(含塑料/金属部件)的警告标签要求？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M4. 竞争格局</h4>
+<ol class="q-list">
+  <li>Top10品牌完整对比矩阵——品牌/原产地/定位/价格带/Amazon BSR/评分/评论数？<span class="source-tag">Amazon + 品牌官网</span></li>
+  <li>Segway-Ninebot在美国市场的详细分析——产品线/SKU数量/线上线下渠道/品牌认知度？</li>
+  <li>GoTrax和Hiboy的定价策略有何不同？谁在打价格战？</li>
+  <li>中国品牌出海 vs 美国本土品牌(Razor) vs 加拿大品牌(Apollo)的定位差异？</li>
+  <li>竞品Amazon评论关键词分析——用户最常提到的优点和缺点是什么？<span class="source-tag">评论数据挖掘</span></li>
+  <li>哪些品牌在融资/上市？资本动向揭示什么趋势？<span class="source-tag">Crunchbase/PitchBook/SEC</span></li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M5. 渠道分析</h4>
+<ol class="q-list">
+  <li>Amazon美国站电动滑板车品类——佣金率(%)、FBA大件费率(每台$?)、平均ACOS？</li>
+  <li>Walmart.com供应商入驻条件？与Amazon的费率对比？</li>
+  <li>Best Buy/Target的线下入驻流程——需要美国主体吗？PO历史要求？<span class="source-tag">各平台供应商页面</span></li>
+  <li>DTC独立站(Shopify)建站成本+FB/Google/TikTok获客CPA估算？<span class="source-tag">Shopify基准+Ads Library</span></li>
+  <li>TikTok Shop美国站对电动滑板车品类开放了吗？佣金率？</li>
+  <li>线下Powersports经销商体系——全美有多少家？给经销商的利润空间？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M6. 利润模型</h4>
+<ol class="q-list">
+  <li>典型通勤滑板车($500零售价)的FOB中国价？<span class="source-tag">1688/阿里巴巴</span></li>
+  <li>电池/电机/控制器/车架/组装 的成本占比拆解？</li>
+  <li>深圳→洛杉矶海运40HQ柜费+单台运费？<span class="source-tag">物流商公开报价</span></li>
+  <li>美国3PL海外仓+尾程配送(UPS/FedEx大件)每台费用？</li>
+  <li>关税25%→50%的利润敏感性分析？汇率±5%影响？</li>
+  <li>退货率(行业5-8%?)对净利润的实际影响？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M7. 保险与产品责任</h4>
+<ol class="q-list">
+  <li>Amazon对电动滑板车卖家的保险最低要求？<span class="source-tag">Amazon Seller Central</span></li>
+  <li>产品责任险(PLI)的保费区间——不同保额($1M/$2M/$5M)的年费？<span class="source-tag">Next/Hiscox公开报价</span></li>
+  <li>CPSC过去5年电动滑板车召回案例分析——原因和频率？<span class="source-tag">CPSC Recall数据库</span></li>
+  <li>锂电池起火诉讼案例——判赔金额？对产品设计和保险的影响？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M8. 消费者画像</h4>
+<ol class="q-list">
+  <li>Amazon评论数据挖掘——购买者年龄/性别/地域/用途的推断？</li>
+  <li>购买决策因素排序——续航>安全>品牌>价格的证据？<span class="source-tag">评论关键词+Reddit讨论</span></li>
+  <li>Google Trends——美国"electric scooter"搜索量的季节性规律？</li>
+  <li>Reddit r/ElectricScooters社区——用户最常讨论的品牌、问题、购买建议？</li>
+  <li>YouTube测评视频——头部KOL是谁？他们对不同品牌的态度？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M9. 风险矩阵</h4>
+<ol class="q-list">
+  <li>12项风险逐项评分(1-5可能性 × 1-5影响度) → 风险热力图</li>
+  <li>关税政策变化的时间线预测？下一轮USTR审查可能在何时？</li>
+  <li>头部品牌价格战的可能性？市场集中度会提高吗？</li>
+  <li>Amazon封号风险——中国品牌被关店的案例和原因？</li>
+  <li>汇率(CNY/USD)未来12个月走势的机构预测汇总？</li>
+</ol>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<hr class="section-divider" id="trike">
+<h2><span class="topic-tag tag-trike">主题二</span> 电动三轮车出海美国 — 10模块 · 58个研究问题</h2>
+
+<div class="module">
+<h4>M1. 银发经济与人口趋势</h4>
+<ol class="q-list">
+  <li>美国65+人口2024年数量？2030/2040年预测？<span class="source-tag">US Census Bureau</span></li>
+  <li>婴儿潮一代（1946-1964出生）的人口规模和退休时间线？</li>
+  <li>65+人群的出行方式现状——开车/步行/公共交通/他人接送的比例？<span class="source-tag">AARP Research</span></li>
+  <li>老年人放弃开车的年龄中位数？放弃开车后的出行替代方案？</li>
+  <li>"aging in place"(居家养老)趋势下对个人出行工具的需求？</li>
+  <li>65+人群的资产和收入中位数——是否有足够购买力？<span class="source-tag">Federal Reserve SCF</span></li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M2. 市场规模</h4>
+<ol class="q-list">
+  <li>美国电动三轮车2024年市场规模($M)和出货量估算？</li>
+  <li>按四大场景拆分——银发代步 / 残障出行 / 货运配送 / 休闲娱乐 各多大？</li>
+  <li>对标欧洲e-trike市场(更成熟)——欧洲的规模和增速预示美国天花板？<span class="source-tag">LEVA-EU/CONEBI</span></li>
+  <li>Amazon"electric trike""3 wheel e-bike"等关键词的搜索量趋势？<span class="source-tag">Google Trends</span></li>
+  <li>Medicare DME(耐用医疗设备)报销数据中的电动三轮车相关条目？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M3. 法规分类决策</h4>
+<ol class="q-list">
+  <li>四种法规分类的定义和合规要求对比——e-Bike Class 1-3 / LSV(低速车辆) / Motorcycle(摩托车) / Mobility Aid(医疗辅具)？</li>
+  <li>如果定位为e-Bike Class 2——电机≤750W、最高20mph、有脚踏——50个州是否全部合法？<span class="source-tag">逐州DMV核查</span></li>
+  <li>如果定位为LSV——需要NHTSA FMVSS 500认证吗？上牌和驾照要求？</li>
+  <li>如果定位为Mobility Aid——FDA Class I豁免条件？Medicare报销路径？<span class="source-tag">CMS Medicare手册</span></li>
+  <li>哪种分类下中国三轮车最容易合规？哪种市场最大？——"合规成本 vs 市场规模"矩阵？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M4. 竞争格局</h4>
+<ol class="q-list">
+  <li>Liberty Trike的完整分析——产品线/价格/渠道/年销估算/用户评价？</li>
+  <li>AddMotor的8款三轮车产品矩阵对比？Amazon排名和评分趋势？</li>
+  <li>Rad Power Bikes RadTrike的定位和市场表现？</li>
+  <li>Emojo / Pedego / Sixthreezero 的产品对比？</li>
+  <li>欧洲品牌(如Babboe货运三轮)在美国市场的存在？</li>
+  <li>竞品用户评价中的共同痛点——续航不够/太重/售后差/法规困惑？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M5. 关税与供应链</h4>
+<ol class="q-list">
+  <li>电动三轮车的HTS编码归类——8711(电动车) vs 8712(自行车) vs 8713(残疾人用车)——三种归类的税率差异？<span class="source-tag">CBP HTS查询</span></li>
+  <li>如果能成功归入8712(自行车)——MFN税率是多少？Section 301是否覆盖？</li>
+  <li>KD散件出口的关税节约测算——部件关税 vs 整车关税？</li>
+  <li>三轮车体积大(单箱0.6-1.2 CBM)——海运成本占FOB的比例？与其他品类的对比？</li>
+  <li>美国本土组装的经济性——美国组装成本 vs 关税节省的平衡点？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M6. 渠道策略</h4>
+<ol class="q-list">
+  <li>Powersports经销商体系——全美约5,000家，电动三轮车品类是否有经销商在卖？<span class="source-tag">经销商名录</span></li>
+  <li>DME医疗辅具供应商渠道——如何成为Medicare认证供应商？<span class="source-tag">CMS Medicare DME手册</span></li>
+  <li>RV/房车展会——美国每年多少场？参展费用？目标人群匹配度？</li>
+  <li>Amazon大件物流成本——三轮车单台FBA费用？与独立站发货对比？</li>
+  <li>适合三轮车的DTC获客渠道——Facebook(老年人用户多) vs Google vs AARP官网广告</li>
+  <li>美国自行车零售店(e-bike专卖店)是否愿意进货三轮车？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M7. 利润模型</h4>
+<ol class="q-list">
+  <li>银发代步款(FOB中国 vs 零售价$1,899)的完整加价链？</li>
+  <li>KD散件+美国组装的利润 vs 整车出口的利润对比？</li>
+  <li>三轮车售后成本预留(轮胎/电池/控制器故障率)估算——比两轮高多少？</li>
+  <li>经销商模式 vs DTC模式的毛利率和净利率对比？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M8. 保险与安全</h4>
+<ol class="q-list">
+  <li>三轮车稳定性/防侧翻是否有行业标准？与两轮车的安全差异？</li>
+  <li>老年人骑行事故在CPSC NEISS数据库中的记录？<span class="source-tag">CPSC NEISS</span></li>
+  <li>产品责任险对"老年人使用"的风险评估和保费影响？</li>
+  <li>各州对三轮e-Bike的保险要求——哪些州强制、哪些州可选？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M9. 消费者洞察</h4>
+<ol class="q-list">
+  <li>Reddit r/AgingParents、r/ebikes、r/disability 社区中关于三轮车的讨论？</li>
+  <li>YouTube上Liberty Trike等产品的测评视频——用户评论区的核心关切？</li>
+  <li>RV论坛(iRV2/RVillage)中房车用户对便携三轮车的讨论？</li>
+  <li>Van Westendorp价格敏感度分析——品牌官网和Amazon的价格点分布？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M10. 政策机遇</h4>
+<ol class="q-list">
+  <li>各州e-Bike补贴政策——加州/科罗拉多/佛蒙特 等的补贴金额和条件？<span class="source-tag">各州能源局</span></li>
+  <li>Medicare Advantage OTC福利卡——是否可用于购买电动三轮车？</li>
+  <li>ADA无障碍出行基金——城市是否有为老年人提供出行补贴的项目？</li>
+  <li>IRA法案是否在讨论扩展e-Bike税收抵免？</li>
+</ol>
+</div>
+
+<!-- ═══════════════════════════════════════════ -->
+<hr class="section-divider" id="glass">
+<h2><span class="topic-tag tag-glass">主题三</span> 美国玻璃容器建厂 — 12模块 · 67个研究问题</h2>
+
+<div class="module">
+<h4>M1. 市场需求</h4>
+<ol class="q-list">
+  <li>美国玻璃容器市场规模($B,百万吨)2024年数据？<span class="source-tag">IBISWorld</span></li>
+  <li>按终端行业拆分——啤酒/饮料/食品/葡萄酒/烈酒/药品/化妆品各占多少？<span class="source-tag">GPI</span></li>
+  <li>过去5年美国玻璃容器需求增长趋势？与塑料/铝罐的竞争态势？</li>
+  <li>可持续包装趋势——多少比例的消费者愿意为玻璃包装支付溢价？<span class="source-tag">PMMI消费者调研</span></li>
+  <li>美国玻璃容器进口量——从哪里进口？(中国/墨西哥/欧洲)？进口占比？<span class="source-tag">USITC DataWeb</span></li>
+  <li>精酿啤酒和手工烈酒的增长——对小批量玻璃瓶的需求拉动？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M2. 竞争格局</h4>
+<ol class="q-list">
+  <li>O-I Glass(NYSE:OI)美国市场——工厂数量、位置、产能、年收入、EBITDA率？<span class="source-tag">10-K年报</span></li>
+  <li>Ardagh Group美国业务——与O-I的竞争定位差异？</li>
+  <li>独立玻璃厂(Gallo Glass/Anchor Glass/Piramal Glass)的角色？</li>
+  <li>近5年行业并购(M&A)动态——市场集中度是在上升还是下降？</li>
+  <li>中国玻璃容器对美出口现状——数量、金额、主要出口商？<span class="source-tag">USITC</span></li>
+  <li>有没有中国玻璃制造企业在海外建厂的成功案例？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M3. 选址分析</h4>
+<ol class="q-list">
+  <li>美国各州工业天然气价格对比($/MMBtu)——最低和最高相差多少倍？<span class="source-tag">EIA</span></li>
+  <li>各州工业电价对比(¢/kWh)——对玻璃生产成本的影响权重？</li>
+  <li>美国硅砂矿分布——哪些州有优质硅砂资源？<span class="source-tag">USGS</span></li>
+  <li>主要灌装厂(可口可乐/百威/雀巢等)的工厂分布——靠近客户能节省多少运输成本？</li>
+  <li>铁路和高速公路基础设施——玻璃容器是重货，物流半径的经济性边界？</li>
+  <li>劳动力市场——哪些州有制造业基础且有可用劳动力？工资水平？<span class="source-tag">BLS</span></li>
+  <li>六因素加权排名——输出Top5候选州？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M4. 建厂投资(CAPEX)</h4>
+<ol class="q-list">
+  <li>玻璃窑炉(熔炉+供料道)的投资——不同吨位(300/400/500吨/天)的造价？<span class="source-tag">设备商资料+行业基准</span></li>
+  <li>IS行列式制瓶机的价格——Emhart vs Bottero vs 山东三金？</li>
+  <li>退火炉、冷端喷涂、自动检验设备的投资？</li>
+  <li>厂房土建+公用工程(天然气管道/电力/水处理)——占CAPEX的比例？</li>
+  <li>年产10万吨/15万吨/20万吨三档的总CAPEX估算？</li>
+  <li>中国设备(山东三金等) vs 欧美设备(Emhart/Bottero)的性价比对比？</li>
+  <li>窑炉寿命8-12年——大修或重建的成本和时间？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M5. 运营成本(OPEX)</h4>
+<ol class="q-list">
+  <li>吨玻璃生产的天然气消耗(MMBtu)和电力消耗(kWh)——行业基准？<span class="source-tag">GPI能效数据</span></li>
+  <li>能源成本占总成本的%——为什么说"天然气价格是玻璃厂的生命线"？</li>
+  <li>原料成本——硅砂$/吨、纯碱$/吨、石灰石$/吨、碎玻璃$/吨？<span class="source-tag">USGS</span></li>
+  <li>碎玻璃(cullet)的使用比例——每增加10% cullet节省多少能源？</li>
+  <li>人工成本——三班倒、每班多少人、平均时薪+福利？<span class="source-tag">BLS</span></li>
+  <li>吨玻璃总生产成本估算？对标O-I的EBITDA率验证？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M6. 环境法规</h4>
+<ol class="q-list">
+  <li>EPA NSPS(40 CFR Part 60 Subpart CC)对玻璃窑炉的具体排放限值？<span class="source-tag">EPA 40 CFR</span></li>
+  <li>Title V空气排放许可的申请流程、时间线和费用？</li>
+  <li>NPDES废水排放许可要求？玻璃厂的废水主要是什么？</li>
+  <li>废耐火材料和除尘灰的处置——是否属于危险废物？</li>
+  <li>加州额外要求(Cap-and-Trade碳配额)——是否应避开加州选址？</li>
+  <li>近期是否有环保组织起诉玻璃厂的案例？<span class="source-tag">联邦法院公开记录</span></li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M7. 税收优惠</h4>
+<ol class="q-list">
+  <li>Top5候选州的企业所得税率+制造业减免对比？<span class="source-tag">各州EDA网站</span></li>
+  <li>Property Tax Abatement——哪些州对新工厂提供房产税减免？年限？</li>
+  <li>IDA(Industrial Development Agency)补贴——典型补贴方案？</li>
+  <li>联邦Opportunity Zone政策——候选地是否在OZ内？</li>
+  <li>Workforce Training Grant——州政府是否补贴工人培训？</li>
+  <li>TIF(Tax Increment Financing)对工业项目的适用性？</li>
+  <li>近期美国新建制造业工厂的税收优惠案例参考？<span class="source-tag">Area Development杂志</span></li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M8. 劳动力分析</h4>
+<ol class="q-list">
+  <li>玻璃制造关键岗位——窑炉操作工/IS机操作工/模具维修工/质检员——美国供给情况？</li>
+  <li>Top5候选州的玻璃/制造业平均时薪？<span class="source-tag">BLS OES</span></li>
+  <li>美国钢铁工人联合会(USW)覆盖了O-I和Ardagh的哪些工厂？<span class="source-tag">USW公开协议</span></li>
+  <li>社区学院是否有玻璃制造培训项目？<span class="source-tag">学院官网</span></li>
+  <li>H-1B/L-1签证能否用于中国技术团队派遣？政策现状？<span class="source-tag">USCIS</span></li>
+  <li>新工厂的招聘+培训周期？从点火到满产需要多长时间？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M9. 原料供应链</h4>
+<ol class="q-list">
+  <li>美国硅砂主要产区——中西部(伊利诺伊/威斯康星) vs 东南部(乔治亚)——品质和价格差异？<span class="source-tag">USGS</span></li>
+  <li>纯碱(Soda Ash)——美国怀俄明州拥有全球最大天然碱储量——价格优势和供应稳定性？</li>
+  <li>石灰石供应——是否靠近石灰石采石场？</li>
+  <li>美国玻璃回收体系——碎玻璃(cullet)的回收率、质量和价格？<span class="source-tag">GPI</span></li>
+  <li>各原料的运输成本——铁路 vs 卡车？</li>
+  <li>原料价格的历史波动——纯碱/硅砂近5年价格走势？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M10. 客户开发</h4>
+<ol class="q-list">
+  <li>大型食品饮料品牌(可口可乐/百威/雀巢)的玻璃瓶采购合同——通常是多年合同？<span class="source-tag">年报披露</span></li>
+  <li>玻璃瓶定价公式——是否与天然气价格联动？</li>
+  <li>新供应商的认证流程——从样品送检到批量供货需要多长时间？</li>
+  <li>精酿啤酒/葡萄酒/烈酒对玻璃瓶的需求——是否更愿意与独立玻璃厂合作？<span class="source-tag">Brewers Association</span></li>
+  <li>美国玻璃瓶"短缺"或"供应紧张"的历史事件——是否存在供不应求窗口？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M11. 财务模型</h4>
+<ol class="q-list">
+  <li>年产15万吨玻璃容器厂的收入预测——吨价×产能利用率(爬坡曲线)？</li>
+  <li>CAPEX折旧——窑炉8-12年、IS机、其他设备分别折旧年限？</li>
+  <li>OPEX逐项——能源+原料+人工+维护+质检+管理+物流？</li>
+  <li>EBITDA率对标——O-I Glass(约18-22%)和Ardagh Group(约15-18%)？<span class="source-tag">年报</span></li>
+  <li>FCF(自由现金流)预测和IRR？</li>
+  <li>投资回收期——乐观/基准/悲观三情景？</li>
+  <li>天然气价格±30%对利润的敏感性？产能利用率±10%的影响？</li>
+</ol>
+</div>
+
+<div class="module">
+<h4>M12. 风险矩阵</h4>
+<ol class="q-list">
+  <li>天然气价格——历史波动范围？EIA对未来5年的价格预测？</li>
+  <li>环保法规升级——EPA是否在讨论收紧玻璃窑炉NOx/SO2排放标准？<span class="source-tag">EPA政策追踪</span></li>
+  <li>中国设备进口关税——IS机和窑炉设备的HTS编码和关税率？</li>
+  <li>工会组织化——新工厂被USW组织的概率？对运营成本的影响？<span class="source-tag">NLRB数据</span></li>
+  <li>纯碱价格周期——历史价格波动和未来供需预测？</li>
+  <li>经济衰退——啤酒/饮料/食品需求在经济下行时的弹性？</li>
+  <li>反倾销——中国玻璃容器是否面临美国反倾销调查风险？</li>
+</ol>
+</div>
+
+<hr>
+<p style="text-align:center;color:var(--muted);font-size:.9em;padding:20px 0">
+  <em>以上为调研框架。确认后按此框架逐模块开展线上深度调研，输出最终报告。</em><br>
+  🤖 Powered by Claude Code + DeepSeek · 纯线上 · AI驱动 · 零线下
+</p>
+
+</div></body></html>

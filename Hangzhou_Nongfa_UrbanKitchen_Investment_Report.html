@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>杭州***城市厨房项目投资分析报告 — 上海虎鲸云科技</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+<style>
+:root{--navy:#1a3a5c;--blue:#2471a3;--lightblue:#2980b9;--gold:#b8860b;--text:#2c3e50;--muted:#7f8c8d;--bg:#fafbfc;--card:#fff;--border:#dde3e8;--stripe:#f4f7fa;--accentbg:#eaf1f8;--warnbg:#fffdf5;--red:#c0392b;--green:#27ae60}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans SC","Segoe UI",-apple-system,sans-serif;font-size:15px;line-height:1.78;color:var(--text);background:var(--bg)}
+.cover{background:linear-gradient(165deg,#0d1b2a 0%,#1a3a5c 50%,#1a5276 100%);color:#fff;padding:90px 48px 72px;text-align:center}
+.cover h1{font-size:2em;font-weight:800;letter-spacing:0.01em;line-height:1.35;margin-bottom:12px}
+.cover .subtitle{font-size:1.05em;opacity:.80;font-weight:300;margin-bottom:32px}
+.cover .meta{font-size:.88em;opacity:.70;display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.container{max-width:920px;margin:0 auto;padding:36px 28px 60px}
+h2{font-size:1.38em;color:var(--navy);border-bottom:2px solid var(--border);padding-bottom:7px;margin:50px 0 16px}
+h3{font-size:1.1em;color:#2c3e50;margin:28px 0 9px;font-weight:700}
+h4{font-size:1em;color:#34495e;margin:18px 0 7px;font-weight:600}
+p{margin:9px 0}strong{color:var(--navy)}
+.kfc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}
+.kfc{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;box-shadow:0 1px 3px rgba(0,0,0,.03)}
+.kfc .num{font-size:1.45em;font-weight:800;color:var(--navy)}.kfc .label{font-size:.82em;color:var(--muted);margin-top:3px;line-height:1.4}
+.table-wrap{overflow-x:auto;margin:14px 0 20px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+table{width:100%;border-collapse:collapse;font-size:.85em;background:var(--card)}
+thead th{background:var(--navy);color:#fff;font-weight:600;padding:9px 11px;text-align:left;font-size:.86em;white-space:nowrap}
+tbody td{padding:7px 11px;border-bottom:1px solid var(--border);vertical-align:top}
+tbody tr:nth-child(even){background:var(--stripe)}
+.sec-summary{background:var(--stripe);border-left:4px solid var(--lightblue);padding:12px 16px;margin:18px 0;border-radius:0 6px 6px 0;font-size:.91em}
+.ch-summary{background:var(--accentbg);padding:14px 18px;margin:24px 0;border-radius:6px;font-size:.91em}
+blockquote{border-left:4px solid var(--gold);background:var(--warnbg);margin:12px 0;padding:10px 14px;border-radius:0 5px 5px 0;color:#6b5a10;font-size:.91em}
+.source{font-size:.76em;color:#95a5a6;margin-top:6px}
+.chapter-q{font-size:.88em;color:var(--muted);margin-bottom:12px;font-style:italic}
+ol,ul{padding-left:22px;margin:6px 0}li{margin:4px 0}
+.finding{background:#fef9f0;border-left:4px solid var(--gold);padding:10px 14px;margin:10px 0;border-radius:0 5px 5px 0;font-size:.89em}
+.chart-wrap{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:20px 20px 14px;margin:18px 0}
+.chart-wrap canvas{max-height:360px}
+.footer{text-align:center;color:var(--muted);font-size:.84em;padding:28px 0 12px;border-top:1px solid var(--border);margin-top:40px}
+.disclaimer{background:var(--card);border:1px solid #ddd;padding:20px;margin:24px 0;font-size:.8em;color:var(--muted);border-radius:5px;line-height:1.65}
+@media print{
+  @page{size:360mm 203mm;margin:16mm 22mm}
+  body{font-size:14pt;line-height:1.8;color:#1a1a1a;background:#fff}
+  .cover{background:linear-gradient(165deg,#0d1b2a 0%,#1a3a5c 50%,#1a5276 100%)!important;padding:70px 90px 65px;min-height:170mm;display:flex;flex-direction:column;justify-content:center;-webkit-print-color-adjust:exact;print-color-adjust:exact;page-break-after:always}
+  .container{max-width:100%;padding:16px 10px}
+  h2{font-size:1.4em;margin:32px 0 16px;page-break-before:always;page-break-after:avoid}
+  h2:first-of-type{page-break-before:avoid}
+}
+</style>
+</head>
+<body>
+<header class="cover">
+  <h1>杭州***城市厨房项目<br>投资分析报告</h1>
+  <p class="subtitle">存量化资产包销型投资 · 城市综合体公寓项目</p>
+  <div class="meta"><span>2020年3月</span><span>杭州 · 武林新城</span><span>上海虎鲸云科技有限公司</span></div>
+</header>
+<div class="container">
+
+<!-- ════════════ EXECUTIVE SUMMARY ════════════ -->
+<h2>执行摘要</h2>
+<p>本项目为<strong>杭州武林新城核心地段</strong>的存量化资产包销型投资机会。标的为「杭州***城市厨房」城市综合体内的三栋12层商务公寓（办公性质）和一栋6层裙房商务公寓（商业性质），可售建筑面积<strong>56,265㎡、可售套数936套</strong>，主力户型面积段50-60㎡。资产方为<strong>浙江省***农产品有限公司</strong>——浙江省***发展集团有限公司旗下的全资国有子公司，浙江省直属国有企业，政府背景、信用有优势。</p>
+
+<div class="kfc-grid">
+  <div class="kfc"><div class="num">56,265㎡</div><div class="label">可售建筑面积</div></div>
+  <div class="kfc"><div class="num">936套</div><div class="label">可售套数</div></div>
+  <div class="kfc"><div class="num">23,000元/㎡</div><div class="label">包销合作底价</div></div>
+  <div class="kfc"><div class="num">30,000元/㎡</div><div class="label">预估整盘销售均价</div></div>
+  <div class="kfc"><div class="num">9,173万</div><div class="label">非融资净利润</div></div>
+  <div class="kfc"><div class="num">155%</div><div class="label">非融资IRR</div></div>
+</div>
+
+<div class="ch-summary"><strong>▸ 核心结论：</strong>① 项目位于杭州武林新城，区位优越、配套醇熟，建面逾30万方打造区域商业综合体旗舰；② ***以销售退出见长，能为项目快速去化提供强有力保证，同时依托***实现资源嫁接；③ 合作底价23,000元/㎡远低于同类产品市场销售均价，溢价空间较大，投资安全垫厚；④ 资产方国企背景，履约有保证，能够确保保证金的按时足额返还；⑤ 24个月实现退出，非融资IRR 155%、ROE 26%，去化率50%即可实现盈亏平衡。</div>
+
+<!-- ════════════ CHAPTER 1: INVESTMENT HIGHLIGHTS ════════════ -->
+<h2>一、投资亮点</h2>
+
+<h3>1.1 杭州核心地段优质物业，具有价值稀缺性</h3>
+<p>项目位于杭州武林新城，区位优越、配套醇熟，建面逾30万方打造区域商业综合体旗舰。作为杭州中心城区稀缺的酒店式公寓标的，在2018年"限酒令"（最小产权分割单元不小于300㎡）政策背景下，小面积公寓产品已成为结构性稀缺资产。</p>
+
+<h3>1.2 ***为项目价值赋能，实现营销溢价</h3>
+<p>***以销售退出见长，能够为项目快速去化提供强有力的保证；同时依托***实现资源嫁接。通过精装修赋能（装修成本2,500元/㎡）和专业化营销操盘，实现从底价23,000元/㎡到销售均价30,000元/㎡的价值提升。</p>
+
+<h3>1.3 投资安全垫较厚，投资收益高</h3>
+<p>***与资产方合作底价23,000元/㎡，远低于同类产品市场销售均价（竞品售价3.5-4.3万元/㎡），溢价空间较大（7,000元/㎡）。项目整体去化率达到50%即可实现盈亏平衡，安全边际充裕。</p>
+
+<h3>1.4 资产方国企背景，履约有保证</h3>
+<p>资产方为浙江省***农产品有限公司，是浙江省直属的国有企业，拥有政府背书，信用有优势，能够确保***投入履约保证金的按时足额返还。</p>
+
+<!-- ════════════ CHAPTER 2: INVESTMENT BACKGROUND ════════════ -->
+<h2>二、投资背景与交易结构</h2>
+
+<h3>2.1 项目标的</h3>
+<ul>
+  <li>标的为杭州***城市厨房项目三栋12层商务公寓（办公性质）和一栋6层裙房商务公寓（商业性质），可售建筑面积56,265㎡，可售套数936套，主力户型面积段50-60㎡</li>
+  <li>三栋商务公寓标的分布在2-12层，层高为3.2米、4.2米和5.9米，其中4.2米居多，套数占比64%；裙房公寓标的分布在4-6层，层高均为3.2米</li>
+  <li>合计交易总货值129,410万元，毛坯交易底价均价23,000元/㎡</li>
+</ul>
+
+<h3>2.2 资产方背景</h3>
+<p>资产方为浙江省***农产品有限公司，是浙江省直属的国有企业，浙江省***发展集团有限公司旗下的全资国有子公司，政府背景，信用有优势。</p>
+
+<h3>2.3 交易条件</h3>
+<ul>
+  <li><strong>合作模式：</strong>包销方案推进；***需支付保证金1亿元，根据签约及预售节点分批支付，以保证金为限额进行合作</li>
+  <li><strong>保证金支付节奏：</strong>2020年4月***与资产方签约支付5,000万元保证金；2020年8月项目获取预售证，***支付保证金至1亿元</li>
+  <li><strong>保证金返还：</strong>资产方根据回款比例将保证金按月返还***（首笔保证金返还时间为开始销售的次月）</li>
+  <li><strong>销售考核：</strong>双方约定销售周期18个月（2020年8月至2022年1月），若***未在规定的考核时间内完成全部房源签约，资产方有权罚没未退还***的保证金，双方合作关系解除</li>
+</ul>
+
+<h3>2.4 资金投入总览</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>投入项</th><th>金额（万元）</th><th>说明</th></tr></thead>
+  <tbody>
+    <tr><td>保证金</td><td>10,000</td><td>分批支付，按月返还</td></tr>
+    <tr><td>房源内部装修</td><td>11,253</td><td>约2,000元/㎡ × 56,265㎡</td></tr>
+    <tr><td>渠道分销成本</td><td>7,488</td><td>总销4.4%，约8万元/套</td></tr>
+    <tr><td>公共区域装修</td><td>2,813</td><td>约500元/㎡</td></tr>
+    <tr><td>人工成本</td><td>2,026</td><td>总销1.2%</td></tr>
+    <tr><td>售楼处及样板间装修</td><td>1,000</td><td>—</td></tr>
+    <tr><td>营销推广</td><td>675</td><td>总销0.4%</td></tr>
+    <tr><td>物料成本</td><td>506</td><td>总销0.3%</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>非融资总投入</td><td>约35,761</td><td>全自有资金</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>资金峰值</td><td>10,365</td><td>—</td></tr>
+  </tbody>
+</table></div>
+
+<h3>2.5 收益构成</h3>
+<ul>
+  <li>精装修销售整盘均价预估30,000元/㎡（***负责公共区域及室内装修事宜，装修成本2,500元/㎡）</li>
+  <li>溢价部分（7,000元/㎡）中约5,300元/㎡按装修费合同入***账户，约1,700元/㎡按咨询费合同入***账户</li>
+  <li>项目整体总销168,795万元，非融资净利润9,173万元，非融资IRR 155%、非融资ROE 26%；24个月（2020.4-2022.3）实现退出</li>
+</ul>
+
+<h3>2.6 交易架构</h3>
+<p>综合考虑税务监督属地化和操作的合规性，本项目交易架构做如下安排：</p>
+<ul>
+  <li>***操作主体为上海***（考虑到项目跟投平台在上海***，拟增加装修经营范围）和杭州***</li>
+  <li>***溢价中，部分通过装修费形式进上海***，部分以咨询服务费形式进杭州***</li>
+  <li>合同1：装修费合同均价5,300元/㎡（约32万元/套）</li>
+  <li>合同2：咨询服务费合同均价1,700元/㎡（约10万元/套）</li>
+  <li>该交易架构后期根据融资及跟投方案会做相应调整</li>
+</ul>
+
+<h3>2.7 投资收益总表</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>指标</th><th>金额（万元）</th></tr></thead>
+  <tbody>
+    <tr><td>总收入（含税）—装修及咨询服务费收入</td><td>39,386</td></tr>
+    <tr><td>总成本</td><td>30,213</td></tr>
+    <tr><td style="padding-left:24px">项目直接成本</td><td>25,761</td></tr>
+    <tr><td style="padding-left:24px">人工成本（总销1.2%）</td><td>2,026</td></tr>
+    <tr><td style="padding-left:24px">渠道成本（总销4.4%，8万元/套）</td><td>7,488</td></tr>
+    <tr><td style="padding-left:24px">物料成本（总销0.3%）</td><td>506</td></tr>
+    <tr><td style="padding-left:24px">营销推广（总销0.4%）</td><td>675</td></tr>
+    <tr><td style="padding-left:24px">售楼处及样板间装修</td><td>1,000</td></tr>
+    <tr><td style="padding-left:24px">公区和内部装修</td><td>14,066</td></tr>
+    <tr><td>税费成本</td><td>4,452</td></tr>
+    <tr><td style="padding-left:24px">增值税及附加</td><td>1,394</td></tr>
+    <tr><td style="padding-left:24px">企业所得税</td><td>3,058</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>非融资净利润</td><td>9,173</td></tr>
+    <tr style="font-weight:bold;background:#e8f8ee"><td>非融资IRR</td><td>155%</td></tr>
+    <tr style="font-weight:bold;background:#e8f8ee"><td>非融资ROE</td><td>26%</td></tr>
+    <tr><td>资金峰值</td><td>10,365</td></tr>
+  </tbody>
+</table></div>
+
+<div class="chart-wrap"><canvas id="chartInvestStructure"></canvas></div>
+
+<!-- ════════════ CHAPTER 3: TIMELINE ════════════ -->
+<h2>三、时间节点铺排</h2>
+<div class="table-wrap"><table>
+  <thead><tr><th>时间</th><th>项目销售节点</th><th>装修工程节点</th><th>保证金支付</th></tr></thead>
+  <tbody>
+    <tr><td>2020年4月</td><td>***与资产方签约</td><td>—</td><td>5,000万元</td></tr>
+    <tr><td>2020年5月</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2020年6月</td><td>项目筹备，蓄客阶段</td><td>售楼处和样板间装修（2020.6-2020.7）</td><td>—</td></tr>
+    <tr><td>2020年7月</td><td>—</td><td>售楼处和样板间装修</td><td>—</td></tr>
+    <tr><td>2020年8月</td><td>领取预证，项目正式对外销售</td><td>公共区域装修（2020.8-2021.2，共7个月）</td><td>付至10,000万元（100%）</td></tr>
+    <tr><td>2020年11月</td><td>持续销售</td><td>公共区域装修</td><td>—</td></tr>
+    <tr><td>2021年2月</td><td>持续销售</td><td>公共区域装修完毕，一次交付<br>房源内部装修（2020.8-2022.1，共18个月）</td><td>—</td></tr>
+    <tr><td>2021年8月</td><td>持续销售</td><td>房源内部装修</td><td>—</td></tr>
+    <tr><td>2022年1月</td><td>房源销售完毕，预计销售周期18个月</td><td>房源内部装修完毕，二次交付</td><td>—</td></tr>
+    <tr><td>2022年3月</td><td>—</td><td>—</td><td>保证金结算完毕，项目正式退出</td></tr>
+  </tbody>
+</table></div>
+
+<!-- ════════════ CHAPTER 4: SALES PLAN ════════════ -->
+<h2>四、销售计划与资金排布</h2>
+
+<h3>4.1 月度销售与资金排布</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>月份</th><th>预计成交套数</th><th>***装修费收入(万元)</th><th>***咨询费收入(万元)</th><th>保证金返还(万元)</th><th>售楼处/样板间支出</th><th>公区装修支出</th><th>房源装修支出</th><th>保证金流出</th></tr></thead>
+  <tbody>
+    <tr><td>2020.4</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>5,000</td></tr>
+    <tr><td>2020.5</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2020.6</td><td>—</td><td>—</td><td>—</td><td>—</td><td>500</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2020.7</td><td>—</td><td>—</td><td>—</td><td>—</td><td>500</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2020.8</td><td>70</td><td>2,246</td><td>700</td><td>374</td><td>—</td><td>844</td><td>563</td><td>5,000</td></tr>
+    <tr><td>2020.9</td><td>55</td><td>1,764</td><td>550</td><td>668</td><td>—</td><td>1,125</td><td>—</td><td>—</td></tr>
+    <tr><td>2020.10</td><td>55</td><td>1,764</td><td>550</td><td>588</td><td>—</td><td>844</td><td>—</td><td>—</td></tr>
+    <tr><td>2020.11</td><td>70</td><td>2,246</td><td>700</td><td>668</td><td>—</td><td>—</td><td>3,376</td><td>—</td></tr>
+    <tr><td>2020.12</td><td>70</td><td>2,246</td><td>700</td><td>748</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.1</td><td>35</td><td>1,123</td><td>350</td><td>561</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.2</td><td>25</td><td>802</td><td>250</td><td>321</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.3</td><td>48</td><td>1,540</td><td>480</td><td>390</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.4</td><td>55</td><td>1,764</td><td>550</td><td>550</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.5</td><td>50</td><td>1,604</td><td>500</td><td>561</td><td>—</td><td>—</td><td>4,501</td><td>—</td></tr>
+    <tr><td>2021.6</td><td>63</td><td>2,021</td><td>630</td><td>604</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.7</td><td>70</td><td>2,246</td><td>700</td><td>710</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.8</td><td>60</td><td>1,925</td><td>600</td><td>694</td><td>—</td><td>—</td><td>2,813</td><td>—</td></tr>
+    <tr><td>2021.9</td><td>50</td><td>1,604</td><td>500</td><td>588</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.10</td><td>50</td><td>1,604</td><td>500</td><td>534</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.11</td><td>60</td><td>1,925</td><td>600</td><td>588</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2021.12</td><td>25</td><td>802</td><td>250</td><td>454</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2022.1</td><td>25</td><td>802</td><td>250</td><td>267</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>2022.2</td><td>—</td><td>—</td><td>—</td><td>134</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>合计</td><td>936</td><td>30,026</td><td>9,360</td><td>10,000</td><td>1,000</td><td>2,813</td><td>11,253</td><td>10,000</td></tr>
+  </tbody>
+</table></div>
+
+<h3>4.2 资金回款说明</h3>
+<ul>
+  <li><strong>装修费收入：</strong>按5,300元/㎡装修合同入***账户，小业主签约当月到账</li>
+  <li><strong>咨询服务费收入：</strong>按1,700元/㎡咨询服务费合同入***账户，小业主签约当月到账</li>
+  <li><strong>保证金返还：</strong>按资产方回款比例按月返还（首次返还于小业主签约次月）</li>
+  <li><strong>房款回款：</strong>按23,000元/㎡购房合同入资产方账户，小业主首付50%签约当月到账，按揭款50%签约次月到账（银行审批通过视为回款到账）</li>
+</ul>
+
+<div class="chart-wrap"><canvas id="chartCashFlow"></canvas></div>
+<div class="sec-summary"><strong>▸ 本节总结：</strong>总收入来源两个合同通道——装修费30,026万元+咨询费9,360万元=39,386万元。保证金10,000万元在销售周期内按月全额返还。资金峰值仅10,365万元，即***实际最大净投入不超过1.04亿元，而净利润可达9,173万元，资金效率极高。</div>
+
+<!-- ════════════ CHAPTER 5: SENSITIVITY ════════════ -->
+<h2>五、敏感性分析</h2>
+
+<h3>5.1 销售均价30,000元/㎡条件下不同合作底价</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>合作底价 (元/㎡)</th><th>销售价格 (元/㎡)</th><th>非融资净利润 (万元)</th><th>非融资IRR</th><th>非融资ROE</th></tr></thead>
+  <tbody>
+    <tr style="background:#e8f8ee"><td>22,000</td><td>30,000</td><td>13,002</td><td>248%</td><td>36%</td></tr>
+    <tr style="background:#e8f8ee"><td>22,500</td><td>30,000</td><td>11,087</td><td>199%</td><td>31%</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>23,000（基准）</td><td>30,000（基准）</td><td>9,173</td><td>155%</td><td>26%</td></tr>
+    <tr><td>23,500</td><td>30,000</td><td>7,258</td><td>114%</td><td>20%</td></tr>
+    <tr><td>24,000</td><td>30,000</td><td>5,343</td><td>78%</td><td>15%</td></tr>
+  </tbody>
+</table></div>
+
+<h3>5.2 合作底价23,000元/㎡条件下不同销售均价</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>合作底价 (元/㎡)</th><th>销售价格 (元/㎡)</th><th>非融资净利润 (万元)</th><th>非融资IRR</th><th>非融资ROE</th></tr></thead>
+  <tbody>
+    <tr><td>23,000</td><td>29,000</td><td>5,420</td><td>80%</td><td>15%</td></tr>
+    <tr><td>23,000</td><td>29,500</td><td>7,297</td><td>115%</td><td>20%</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>23,000（基准）</td><td>30,000（基准）</td><td>9,173</td><td>155%</td><td>26%</td></tr>
+    <tr style="background:#e8f8ee"><td>23,000</td><td>30,500</td><td>11,049</td><td>198%</td><td>31%</td></tr>
+    <tr style="background:#e8f8ee"><td>23,000</td><td>31,000</td><td>12,925</td><td>246%</td><td>36%</td></tr>
+  </tbody>
+</table></div>
+
+<div class="finding"><strong>▸ 安全边际判断：</strong>即使在最保守情景（合作底价升至24,000或售价降至29,000），项目IRR仍维持78-80%，净利润5,300-5,400万元。盈亏平衡点约为去化率50%。底价23,000元/㎡与竞品售价3.5-4.3万元/㎡之间的价差为项目提供了充足的安全垫。</div>
+
+<div class="chart-wrap"><canvas id="chartSensitivity"></canvas></div>
+<!-- ════════════ CHAPTER 6: RISK ════════════ -->
+<h2>六、风险与解决方案</h2>
+
+<h3>风险一：保证金返还是否可控</h3>
+<p><strong>风险点：</strong>1亿元保证金的安全性和返还节奏。</p>
+<p><strong>解决方案：</strong></p>
+<ol>
+  <li>保证金按照回款比例逐月返还；溢价同步收取，加快现金流的回收</li>
+  <li>目前价格定位偏保守，基于市场可比楼盘的下限参考，以及成本进一步控制等考虑，整体去化率达到50%即可实现项目的盈亏平衡。我司可根据市场变化，灵活调整销售策略，以确保保证金及时足额返还</li>
+</ol>
+
+<h3>风险二：项目招商延期及其他不可抗力影响销售进展</h3>
+<p><strong>风险点：</strong>商业部分开业延期或不可抗力事件影响销售节奏。</p>
+<p><strong>解决方案：</strong>***与资产方的考核方案中约定销售进度与商业部分的开业、经营相关联，由于资产方原因导致的商业运营节点延期以及其他不可抗力对销售进展产生影响，***有权延长合作期限。</p>
+
+<!-- ════════════ CHAPTER 7: CO-INVESTMENT ════════════ -->
+<h2>七、跟投方案</h2>
+
+<h3>7.1 跟投对象与比例</h3>
+<ul>
+  <li><strong>跟投对象一：</strong>***资管板块经营管理团队成员1%（跟投性质：强制）</li>
+  <li><strong>跟投对象二：</strong>项目投资评估及退出团队成员1%（跟投性质：强制）</li>
+  <li><strong>跟投对象三：</strong>其他参与项目的团队成员0.5%（跟投性质：自愿）</li>
+</ul>
+<p><strong>跟投比例：</strong>资金峰值的2.5%。本项目跟投额度为资金峰值（10,365万元）的2.5%，即<strong>259万元</strong>。</p>
+
+<h3>7.2 出资与退出</h3>
+<ul>
+  <li><strong>出资节点：</strong>与***/***投资主体出资时间一致</li>
+  <li><strong>退出节点：</strong>项目完成退出结案及财务清算后予以本金返还及收益分配</li>
+</ul>
+<p><em>具体跟投人员及出资方案将同步细化方案与***蜂巢控股HR条线沟通，沟通一致后上报合伙人审批。</em></p>
+
+<h3>7.3 跟投架构</h3>
+<p>***置业作为GP，***行作为LP（1-49人），设立有限合伙企业。有限合伙企业持有上海***2.5%股权（增资扩股后）。上海***通过杭州分公司运营杭州***城市厨房项目。</p>
+
+<!-- ════════════ CHAPTER 8: PROJECT DETAILS ════════════ -->
+<h2>八、项目详细介绍</h2>
+
+<h3>8.1 区位交通</h3>
+<p>项目位于<strong>杭州市下城区石桥路与德胜中路交界口</strong>，地处武林新城。武林新城定位为"宜居、宜业、宜游、产城人文融合发展"的杭州之心、城市之眼。</p>
+<ul>
+  <li>项目位于杭州市中心，地处下城区和江干区的交界处，北与下城区的新天地、东与江干区的城东新城、西与城市之星相邻</li>
+  <li>与杭州新天地相距3.4公里，杭州东站4公里（东站整体限高50米），武林广场5.8公里，西湖和钱江新城7.5-8公里</li>
+  <li>交通通达性非常好，横向靠德胜快速路，纵向靠秋石高架，畅达全市</li>
+  <li>距离地铁1号线闸弄口站2.3公里，在建的5号线（预计2020年底通车）杭氧路站1.5公里，机场快线（预计亚运会前通车）站点预计700-800米</li>
+</ul>
+
+<h3>8.2 配套条件</h3>
+<p>项目周边1公里范围内以居住区和学校为主，是传统的居住板块，大型商业配套分布在2公里左右。包括：</p>
+<ul>
+  <li>居住配套：周边成熟居住社区环绕，人口密度高</li>
+  <li>教育配套：1公里范围内多所学校</li>
+  <li>商业配套：2公里左右有大型商业综合体</li>
+  <li>医疗配套：区域内有成熟医疗机构</li>
+</ul>
+
+<h3>8.3 项目整体情况</h3>
+<p>项目为城市综合体，总建面31万方，包含生鲜冷链、商业、酒店、公寓等一系列物业形态，立志于打造具有城市厨房特色的多功能商业综合体。</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>指标</th><th>数据</th></tr></thead>
+  <tbody>
+    <tr><td>占地面积</td><td>5.32公顷</td></tr>
+    <tr><td>绿化率</td><td>25%</td></tr>
+    <tr><td>容积率</td><td>3.0</td></tr>
+    <tr><td>建筑密度</td><td>50%</td></tr>
+    <tr><td>土地价格</td><td>10.8亿元人民币</td></tr>
+    <tr><td>总投资</td><td>36亿元人民币</td></tr>
+    <tr><td>总建筑面积</td><td>31万㎡（地下15万㎡ + 地上16万㎡）</td></tr>
+    <tr><td>地上商业面积</td><td>11万㎡</td></tr>
+    <tr><td>商务公寓</td><td>近5万㎡（三栋）</td></tr>
+    <tr><td>计划开业</td><td>亚运会前</td></tr>
+  </tbody>
+</table></div>
+
+<h3>8.4 标的情况</h3>
+<p>标的为三栋12层商务公寓的2-12层以及裙楼的4-6层公寓，总建面56,265㎡，共936套。三栋商务公寓呈回字形，单层套数14-32套；裙房公寓单层套数30余套。</p>
+
+<h4>8.4.1 层高与套数分布</h4>
+<div class="table-wrap"><table>
+  <thead><tr><th colspan="4">三栋商务公寓</th><th colspan="4">裙楼4-6层公寓</th></tr></thead>
+  <tbody>
+    <tr><td>层高</td><td>套数</td><td>套数占比</td><td>楼层分布</td><td>层高</td><td>套数</td><td>套数占比</td><td>楼层分布</td></tr>
+    <tr><td>3.2米</td><td>204</td><td>24%</td><td>5-8F</td><td>3.2米</td><td>102</td><td>100%</td><td>4-6F</td></tr>
+    <tr><td>4.2米</td><td>534</td><td>64%</td><td>2-4F/8-11F</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>5.9米</td><td>96</td><td>12%</td><td>12F</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>合计</td><td>834</td><td>100%</td><td></td><td>合计</td><td>102</td><td>100%</td><td></td></tr>
+  </tbody>
+</table></div>
+
+<h4>8.4.2 整体层高分布</h4>
+<div class="table-wrap"><table>
+  <thead><tr><th>层高</th><th>套数</th><th>套数占比</th></tr></thead>
+  <tbody>
+    <tr><td>3.2米</td><td>306</td><td>33%</td></tr>
+    <tr><td>4.2米</td><td>534</td><td>57%</td></tr>
+    <tr><td>5.9米</td><td>96</td><td>10%</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>总和</td><td>936</td><td>100%</td></tr>
+  </tbody>
+</table></div>
+
+<div class="chart-wrap"><canvas id="chartUnitMix"></canvas></div>
+
+<h4>8.4.3 单栋分布</h4>
+<ul>
+  <li><strong>单栋278套：</strong>2F:14套；3-6F:18套；7-12F:32套</li>
+  <li><strong>单栋102套：</strong>2F:14套；3-6F:18套；7-12F:32套（另一栋）</li>
+  <li><strong>裙房公寓：</strong>4F:35套；5F:33套；6F:34套</li>
+</ul>
+
+<h4>8.4.4 工程节点</h4>
+<div class="table-wrap"><table>
+  <thead><tr><th>时间</th><th>节点</th></tr></thead>
+  <tbody>
+    <tr><td>拟2020年5月</td><td>竣工验收</td></tr>
+    <tr><td>拟2020年8月</td><td>获取预售证</td></tr>
+    <tr><td>拟2021年2月</td><td>公共区域装修完毕，一次交付</td></tr>
+    <tr><td>拟2022年1月</td><td>房源内部装修完毕，二次交付</td></tr>
+  </tbody>
+</table></div>
+
+<!-- ════════════ CHAPTER 9: MARKET ANALYSIS ════════════ -->
+<h2>九、市场分析</h2>
+
+<h3>9.1 整体市场</h3>
+
+<h4>9.1.1 酒店式公寓政策——"限酒令"</h4>
+<p>杭州<strong>2018年4月颁布新版"限酒令"</strong>——最小产权分割单元不小于300平方米，未来小面积的酒店式公寓项目或成稀缺。本案50-60㎡的小户型产品因此具有显著的政策红利和稀缺性溢价。</p>
+
+<h4>9.1.2 需求走势</h4>
+<p>杭州酒店式公寓<strong>2019年成交1.9万套/92万㎡</strong>，需求走势和商品住宅步调基本一致。杭州酒店式公寓和住宅的价差并未拉开——经过2017-2018年的价格暴涨，杭州酒店式公寓售价接近甚至超过住宅售价，2019年公寓均价是住宅均价的<strong>97%</strong>。</p>
+
+<h4>9.1.3 成交面积结构</h4>
+<p>市场主流公寓为30-50㎡小面积，60㎡以上公寓走量困难。各面积段2019年成交占比：</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>面积段</th><th>30㎡以下</th><th>30-40㎡</th><th>40-50㎡</th><th>50-60㎡</th><th>60-70㎡</th><th>70-80㎡</th><th>80-90㎡</th><th>90㎡以上</th></tr></thead>
+  <tbody>
+    <tr><td>2019年占比</td><td>7%</td><td>~14%</td><td>~40%</td><td>~14%</td><td>~8%</td><td>~7%</td><td>~3%</td><td>~7%</td></tr>
+  </tbody>
+</table></div>
+<p>其中40-50㎡户型成交占比最大约40%，50-60㎡占比约14%年成交约2,700套——本案50-60㎡主力面积段匹配市场主流需求结构。</p>
+
+<h4>9.1.4 成交总价结构</h4>
+<p>随着杭州酒店式公寓整体均价上涨，主流总价段也从100万逐步上涨。2019年成交总价分布：</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>总价段</th><th>100万以下</th><th>100-130万</th><th>130-150万</th><th>150-170万</th><th>170-200万</th><th>200-250万</th><th>250-300万</th><th>300-500万</th><th>500万以上</th></tr></thead>
+  <tbody>
+    <tr><td>2019年占比</td><td>~31%</td><td>~30%</td><td>~14%</td><td>~10%</td><td>~6%</td><td>~3%</td><td>~2%</td><td>~3%</td><td>~1%</td></tr>
+    <tr><td>2019年成交量</td><td>—</td><td>—</td><td>~2,750套</td><td>~2,000套</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+  </tbody>
+</table></div>
+<p>目前100-150万总价段占比最大为37%。本案主力总价110-185万匹配市场流量区间。</p>
+
+<h4>9.1.5 疫情影响分析</h4>
+<p><strong>事件描述：</strong>2020年1月起新型冠状肺炎疫情影响，2月成交创10年最低。</p>
+<ul>
+  <li><strong>短期冲击：</strong>线下销售活动暂停，房地产市场短期内受影响。肺炎疫情影响最严重五省份（湖北、浙江、广东、河南、湖南）占全国商品房销售额比例平均值为29%，短期内对全国商品房销售情况有较大影响</li>
+  <li><strong>政策应对：</strong>房地产作为压舱石，经济开年受制情况下行业调控或有望稳中现宽。2002年国家曾出台调控政策，但在2003年SARS疫情爆发后，国家明确房地产是国民经济的支柱产业，2003年全年房地产市场表现亮眼。现疫情仍处于爆发期，后续房地产调控或稳中有宽</li>
+  <li><strong>杭州实际影响：</strong>2月杭州住宅成交12.6万方，环比下降80.5%，同比下降55%，为近十年来2月份最低点；2月杭州酒店式公寓成交0.4万方，环比下降94.1%，同比下降82.8%</li>
+</ul>
+
+<h3>9.2 竞争市场</h3>
+
+<h4>9.2.1 竞争格局</h4>
+<p>核心竞争圈锁定项目所处的<strong>武林新城板块</strong>，次级竞争圈为邻近的<strong>城东新城和新天地板块</strong>。在售项目都聚集在次级竞争圈。</p>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>竞争能级</th><th>板块</th><th>项目名称</th><th>区域</th><th>酒店式公寓售价</th><th>和本案距离</th><th>销售状态</th></tr></thead>
+  <tbody>
+    <tr><td>核心竞争</td><td>武林新城</td><td>武林之光</td><td>下城区</td><td>4.3万元/㎡</td><td>1公里</td><td style="color:#27ae60">售罄</td></tr>
+    <tr><td>次级-城东新城</td><td>城东新城</td><td>广宇东港空间</td><td>江干区</td><td>3.5万元/㎡</td><td>1.9公里</td><td>持销</td></tr>
+    <tr><td>次级-城东新城</td><td>城东新城</td><td>华润置地中央车站广场二期</td><td>江干区</td><td>3.5万元/㎡</td><td>3.3公里</td><td>尾盘</td></tr>
+    <tr><td>次级-城东新城</td><td>城东新城</td><td>东渡酩悦</td><td>江干区</td><td>3.7万元/㎡</td><td>3.5公里</td><td>尾盘</td></tr>
+    <tr><td>次级-城东新城</td><td>城东新城</td><td>龙湖金地商置都会公馆</td><td>江干区</td><td>3.7万元/㎡</td><td>3.5公里</td><td>持销</td></tr>
+    <tr><td>次级-城东新城</td><td>城东新城</td><td>德信环翼城</td><td>江干区</td><td>3.8万元/㎡</td><td>4.0公里</td><td>持销</td></tr>
+    <tr><td>次级-新天地</td><td>新天地</td><td>杭州新天地</td><td>下城区</td><td>3.0万元/㎡</td><td>3.8公里</td><td>尾盘</td></tr>
+  </tbody>
+</table></div>
+
+<h4>9.2.2 竞品产品与单价详情</h4>
+<p>4.2/4.8米的精装LOFT和双钥匙是主流产品，主力面积40-55㎡。武林之光是三里亭区域内的品质和价格标杆，4.8米双钥匙售价约4.75万元/㎡，4.2米LOFT售价约4.15万元/㎡。城东新城的LOFT/双钥匙酒店式公寓售价约3.5-3.8万元/㎡。</p>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>项目名称</th><th>区域</th><th>板块</th><th>房屋用途</th><th>物业类型</th><th>主力户型</th><th>层高</th><th>产品类型</th><th>开盘时间</th><th>销售单价(万元/㎡)</th><th>表内单价</th><th>表外单价</th><th>表外收费形式</th><th>交付标准</th></tr></thead>
+  <tbody>
+    <tr><td>武林之光</td><td>下城区</td><td>新天地</td><td>商业/金融/信息</td><td>酒店式公寓</td><td>45-55㎡</td><td>4.2米/4.8米</td><td>4.2米-LOFT/4.8米-双钥匙</td><td>2019年1月</td><td>4.28</td><td>3.8</td><td>0.5</td><td>12万团购费+3,000元/㎡装修费</td><td>精装</td></tr>
+    <tr><td>杭州新天地</td><td>下城区</td><td>新天地</td><td>办公</td><td>酒店式公寓</td><td>55/73/130㎡</td><td>3.1米</td><td>平层类住宅</td><td>2017年</td><td>2.94</td><td>2.9</td><td>-</td><td>无</td><td>精装</td></tr>
+    <tr><td>广宇东港空间</td><td>江干区</td><td>城东新城</td><td>办公</td><td>酒店式公寓</td><td>40-65㎡</td><td>4.78米</td><td>双钥匙</td><td>2019年4月</td><td>3.53</td><td>3.5</td><td>-</td><td>无</td><td>精装</td></tr>
+    <tr><td>华润中央车站广场一期</td><td>江干区</td><td>城东新城</td><td>办公</td><td>酒店式公寓</td><td>37/61㎡</td><td>4.2米</td><td>LOFT</td><td>2018年3月</td><td>3.12</td><td>3.1</td><td>-</td><td>无</td><td>精装</td></tr>
+    <tr><td>华润中央车站广场二期</td><td>江干区</td><td>城东新城</td><td>办公</td><td>酒店式公寓</td><td>65/82㎡</td><td>4.2米</td><td>双钥匙/LOFT</td><td>2019年6月</td><td>3.52</td><td>3.5</td><td>-</td><td>无</td><td>精装</td></tr>
+    <tr><td>东渡酩悦</td><td>江干区</td><td>城东新城</td><td>办公</td><td>酒店式公寓</td><td>51㎡</td><td>4.78米</td><td>双钥匙</td><td>2018年10月</td><td>3.70</td><td>3.4</td><td>0.3</td><td>总代刷15万</td><td>精装</td></tr>
+    <tr><td>龙湖金地商置都会公馆</td><td>江干区</td><td>城东新城</td><td>商业</td><td>酒店式公寓</td><td>53㎡</td><td>4.79米</td><td>双钥匙/LOFT</td><td>2019年11月</td><td>3.70</td><td>3.7</td><td>-</td><td>无</td><td>精装</td></tr>
+    <tr><td>德信环翼城</td><td>江干区</td><td>城东新城</td><td>办公</td><td>酒店式公寓</td><td>42-44㎡</td><td>4.75米</td><td>双钥匙</td><td>2019年9月</td><td>3.83</td><td>3.5</td><td>0.3</td><td>装修费</td><td>精装</td></tr>
+  </tbody>
+</table></div>
+
+<h4>9.2.3 竞品总价与去化速度</h4>
+<p>去化速度和总价段密切相关。根据竞品的去化情况，区域内110-150万是流量型总价，月均去化可达80-90套/月；150-170万左右的产品月均去化速度在30-40套；170-200万的总价月均去化20-25套左右。</p>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>项目名称</th><th>板块</th><th>主力户型</th><th>层高</th><th>产品类型</th><th>销售单价(万元/㎡)</th><th>主力总价</th><th>去化速度</th></tr></thead>
+  <tbody>
+    <tr><td>华润置地中央车站广场一期</td><td>城东新城</td><td>37/61㎡</td><td>4.2米</td><td>LOFT</td><td>3.12</td><td>110-170万</td><td>月均79套</td></tr>
+    <tr><td>德信环翼城</td><td>城东新城</td><td>42-44㎡</td><td>4.75米</td><td>双钥匙</td><td>3.83</td><td>160-170万</td><td>月均36套</td></tr>
+    <tr><td>东渡酩悦</td><td>城东新城</td><td>51㎡</td><td>4.78米</td><td>双钥匙</td><td>3.70</td><td>185-190万</td><td>月均24套（2019.8-2020.1）</td></tr>
+    <tr><td>武林之光</td><td>新天地</td><td>45-55㎡</td><td>4.2/4.8米</td><td>LOFT/双钥匙</td><td>4.28</td><td>190-235万</td><td>月均21套</td></tr>
+    <tr><td>华润置地中央车站广场二期</td><td>城东新城</td><td>65/82㎡</td><td>4.2米</td><td>双钥匙/LOFT</td><td>3.52</td><td>65㎡:215-240万<br>82㎡:270-300万</td><td>月均20套</td></tr>
+    <tr><td>龙湖金地商置都会公馆</td><td>城东新城</td><td>53㎡</td><td>4.79米</td><td>双钥匙/LOFT</td><td>3.70</td><td>190-200万</td><td>月均18套</td></tr>
+    <tr><td>广宇东港空间</td><td>城东新城</td><td>40-65㎡</td><td>4.78米</td><td>双钥匙</td><td>3.53</td><td>150-220万</td><td>月均15套</td></tr>
+    <tr><td>杭州新天地</td><td>新天地</td><td>55/73/130㎡</td><td>3.1米</td><td>平层类住宅</td><td>2.94</td><td>150-360万</td><td>尾盘月均5套</td></tr>
+  </tbody>
+</table></div>
+
+<h4>9.2.4 未来竞争格局</h4>
+<p>核心竞争圈无竞品，存量项目集中在次级竞争圈。同期竞品以高总价的中大户型产品为主，主力总价160-200万，面积段50-70㎡，对本案的冲击较小。</p>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>竞争圈</th><th>项目名称</th><th>区县</th><th>板块</th><th>库存面积(㎡)</th><th>库存套数</th><th>套均面积(㎡)</th><th>产品</th><th>总价</th></tr></thead>
+  <tbody>
+    <tr><td>次级-城东新城</td><td>德信环翼城</td><td>江干区</td><td>城东新城</td><td>31,181</td><td>686</td><td>45</td><td>4.75米双钥匙</td><td>160-170万</td></tr>
+    <tr><td>次级-城东新城</td><td>龙湖金地商置都会公馆</td><td>江干区</td><td>城东新城</td><td>43,472</td><td>820</td><td>53</td><td>4.79米双钥匙和LOFT</td><td>197-200万</td></tr>
+    <tr><td>次级-城东新城</td><td>广宇东港空间</td><td>江干区</td><td>城东新城</td><td>35,190</td><td>532</td><td>66</td><td>4.78米双钥匙</td><td>150-220万</td></tr>
+    <tr><td>次级-城东新城</td><td>东渡酩悦</td><td>江干区</td><td>城东新城</td><td>2,819</td><td>54</td><td>52</td><td>4.78米双钥匙</td><td>185-190万</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>合计</td><td></td><td></td><td></td><td>112,662</td><td>2,092</td><td></td><td></td><td></td></tr>
+  </tbody>
+</table></div>
+
+<h4>9.2.5 租赁市场</h4>
+<div class="table-wrap"><table>
+  <thead><tr><th>区域</th><th>序号</th><th>项目名称</th><th>产品类型</th><th>建成年代</th><th>面积</th><th>租金</th><th>二手报价</th><th>回报率</th></tr></thead>
+  <tbody>
+    <tr><td>三里亭</td><td>1</td><td>水岸雅苑</td><td>住宅</td><td>1983年</td><td>76㎡</td><td>4,000元/月</td><td>3.6万元/㎡</td><td>—</td></tr>
+    <tr><td>三里亭</td><td>2</td><td>克拉公馆</td><td>3.1米平层</td><td>2013年</td><td>50-65㎡</td><td>3,500-4,000元/月</td><td>2.5万元/㎡</td><td>3.0%</td></tr>
+    <tr><td>城东新城</td><td>3</td><td>恒祺克拉天玺</td><td>3.1米平层</td><td>2017年</td><td>30-41㎡</td><td>3,300-3,700元/月</td><td>2.9万元/㎡</td><td>4.0%</td></tr>
+    <tr><td>城东新城</td><td>4</td><td>东亚新干线</td><td>4.2米LOFT</td><td>2017年</td><td>55㎡</td><td>4,200-4,300元/月</td><td>2.8万元/㎡</td><td>3.5%</td></tr>
+    <tr><td>城东新城</td><td>5</td><td>三花国际大厦</td><td>3.75米微LOFT</td><td>2017年</td><td>46㎡</td><td>4,200元/月</td><td>3.2万元/㎡</td><td>3.4%</td></tr>
+    <tr><td>城东新城</td><td>6</td><td>德信杭州之翼</td><td>3.6米微LOFT</td><td>2019年</td><td>55㎡</td><td>4,200-4,300元/月</td><td>3.4万元/㎡</td><td>2.7%</td></tr>
+  </tbody>
+</table></div>
+<p>50-65㎡公寓平层租金3,500-4,000元/月，LOFT 4,200-4,300元/月，回报率3%-4%。</p>
+
+<h4>9.2.6 住宅市场</h4>
+<p>限价之下，核心竞争区新房售价5.0万元/㎡（绿城春月锦庐预计售价），次级竞争区-城东新城新房售价4.6-4.7万元/㎡。核心竞争区域次新房价格5.2-5.5万元/㎡（朗诗熙华府、万科新都会1958），次级区域次新房价格3.8-4.4万元/㎡（德胜上郡、东方尚城）。</p>
+
+<h4>9.2.7 宅地出让</h4>
+<p>宅地楼板价接近3万元/㎡，获取方多为知名品质开发商（绿城、中海、嘉里、阳光城）。新房沉寂多年的板块再次成为市场焦点，多盘入市将提高板块热度。</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>序号</th><th>地块名称</th><th>土地性质</th><th>总建面(㎡)</th><th>成交日期</th><th>楼面价(元/㎡)</th><th>竞得人</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>文晖单元XC0402-28等地块</td><td>商住</td><td>229,444</td><td>2019-05-17</td><td>29,698</td><td>嘉里（文晖城市之星）</td></tr>
+    <tr><td>2</td><td>文晖单元XC0402-R/B/S2/S42-27地块</td><td>商住</td><td>61,495</td><td>2019-04-26</td><td>28,209</td><td>中海</td></tr>
+    <tr><td>3</td><td>东新单元XC0606-R21-05地块</td><td>住宅</td><td>35,607</td><td>2019-09-10</td><td>23,782</td><td>西房</td></tr>
+    <tr><td>4</td><td>东新单元XC0604-R21-03地块</td><td>住宅</td><td>95,394</td><td>2019-12-11</td><td>28,275</td><td>绿城</td></tr>
+    <tr><td>5</td><td>三里亭单元JG0901-R21-04A地块</td><td>住宅</td><td>64,476</td><td>2019-04-16</td><td>29,736</td><td>绿城（春月锦庐）</td></tr>
+    <tr><td>6</td><td>三塘单元XC0502-R21/B1/B2-52地块</td><td>住宅</td><td>59,815</td><td>2019-04-02</td><td>26,262</td><td>阳光城</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>合计</td><td></td><td></td><td>54.6万方</td><td></td><td></td><td></td></tr>
+  </tbody>
+</table></div>
+
+<div class="chart-wrap"><canvas id="chartCompPrice"></canvas></div>
+<!-- ════════════ CHAPTER 10: COMPETITOR DEEP DIVE ════════════ -->
+<h2>十、竞品深度分析</h2>
+
+<h3>10.1 武林之光</h3>
+<ul>
+  <li>位于城市之星综合体内，武林新城的标杆项目，主力户型55㎡</li>
+  <li>4.8米为双钥匙产品，相比4.2米层高溢价率约15%</li>
+  <li>2019年1月开盘，售价4.0-4.6万元/㎡，总价约190-235万，月均去化21套</li>
+  <li>售价构成：网签均价3.8万元/㎡ + 表外收费约5,000元/㎡（12万团购费+3,000元/㎡装修费）</li>
+  <li>尽管有40套存量，但对外已称售罄</li>
+</ul>
+<div class="table-wrap"><table>
+  <thead><tr><th>面积段</th><th>销售套数</th><th>销售面积(㎡)</th><th>网签均价(万元/㎡)</th><th>库存套数</th></tr></thead>
+  <tbody>
+    <tr><td>45㎡</td><td>31</td><td>1,393</td><td>3.75</td><td>7</td></tr>
+    <tr><td>52-55㎡</td><td>141</td><td>7,656</td><td>3.75</td><td>33</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>总计</td><td>172</td><td>9,049</td><td>3.75</td><td>40</td></tr>
+  </tbody>
+</table></div>
+
+<h3>10.2 广宇东港空间</h3>
+<ul>
+  <li>居于武林新城和城东新城中间，主力户型55-65㎡，65㎡（含）以下为4.8米双钥匙，配套弱，产品力一般</li>
+  <li>2019年4月开盘，单价约3.53万元/㎡，主力总价约150-220万，月均去化15套</li>
+  <li>表外收费：无</li>
+</ul>
+<div class="table-wrap"><table>
+  <thead><tr><th>面积段</th><th>库存套数</th><th>销售套数</th><th>销售面积(㎡)</th><th>网签均价(万元/㎡)</th></tr></thead>
+  <tbody>
+    <tr><td>35㎡</td><td>18</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>40-48㎡</td><td>79</td><td>118</td><td>5,510</td><td>3.54</td></tr>
+    <tr><td>55-60㎡</td><td>207</td><td>3</td><td>171</td><td>3.55</td></tr>
+    <tr><td>65㎡</td><td>115</td><td>13</td><td>849</td><td>3.42</td></tr>
+    <tr><td>76-95㎡</td><td>64</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>112-127㎡</td><td>47</td><td>1</td><td>114</td><td>3.69</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>合计</td><td>530</td><td>135</td><td>6,644</td><td>3.53</td></tr>
+  </tbody>
+</table></div>
+
+<h3>10.3 华润置地中央车站广场二期</h3>
+<ul>
+  <li>位于火车东站旁的华润大型综合体内，主力户型65㎡，4.2米层高，为双钥匙房——左右排列、分割成单独的两个LOFT产品，改变了传统上下布局</li>
+  <li>2019年6月开盘，单价3.52万元/㎡，主力总价215-300万，月均去化20套，目前仅库存20套</li>
+  <li>表外收费：无</li>
+</ul>
+<div class="table-wrap"><table>
+  <thead><tr><th>面积段</th><th>库存套数</th><th>销售套数</th><th>销售面积(㎡)</th><th>网签均价(万元/㎡)</th></tr></thead>
+  <tbody>
+    <tr><td>65㎡</td><td>10</td><td>120</td><td>7,736</td><td>3.52</td></tr>
+    <tr><td>77㎡</td><td>0</td><td>3</td><td>232</td><td>3.73</td></tr>
+    <tr><td>82㎡</td><td>8</td><td>16</td><td>1,302</td><td>3.46</td></tr>
+    <tr><td>153㎡</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>总计</td><td>20</td><td>139</td><td>9,271</td><td>3.52</td></tr>
+  </tbody>
+</table></div>
+
+<h3>10.4 东渡酩悦</h3>
+<ul>
+  <li>与华润项目一路之隔，项目规模小，4.78米双钥匙产品，主力户型51㎡，立面、装修品质较为一般</li>
+  <li>尾盘，2018年1月开盘，目前销售单价3.7万元/㎡，主力总价约185-190万</li>
+  <li>2018.10-2019.7月均6套（价位高启），2019.6之后单价有所下调后月均24套</li>
+  <li>售价构成：网签均价3.4万元/㎡ + 表外收费约3,000元/㎡（总代刷15万）</li>
+</ul>
+<div class="table-wrap"><table>
+  <thead><tr><th>面积段</th><th>库存套数</th><th>销售套数</th><th>销售面积(㎡)</th><th>网签均价(万元/㎡)</th></tr></thead>
+  <tbody>
+    <tr><td>32㎡</td><td>1</td><td>23</td><td>742</td><td>4.15</td></tr>
+    <tr><td>51㎡（双钥匙）</td><td>49</td><td>180</td><td>9,160</td><td>3.54</td></tr>
+    <tr><td>74㎡</td><td>4</td><td>2</td><td>148</td><td>3.36</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>总计</td><td>54</td><td>205</td><td>10,050</td><td>3.59</td></tr>
+  </tbody>
+</table></div>
+
+<h3>10.5 龙湖金地商置都会公馆</h3>
+<ul>
+  <li>商住综合体，主力户型50-55㎡，4.79米，分为双钥匙和LOFT产品，双钥匙比LOFT高1,000-2,000元/㎡</li>
+  <li>2019年9月开盘，单价约3.7万元/㎡（网签均价3.53万元/㎡），主力总价约190-200万，月均去化18套</li>
+  <li>表外收费：无</li>
+</ul>
+<div class="table-wrap"><table>
+  <thead><tr><th>面积段</th><th>存量套数</th><th>销售套数</th><th>销售面积(㎡)</th><th>网签均价(万元/㎡)</th></tr></thead>
+  <tbody>
+    <tr><td>35-40㎡</td><td>30</td><td>19</td><td>685</td><td>3.71</td></tr>
+    <tr><td>50-55㎡（双钥匙）</td><td>789</td><td>37</td><td>1,987</td><td>3.71</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>总计</td><td>819</td><td>56</td><td>2,672</td><td>3.71</td></tr>
+  </tbody>
+</table></div>
+
+<h3>10.6 德信环翼城</h3>
+<ul>
+  <li>彭埠站地铁上盖物业，主力户型42-44㎡，4.75米双钥匙</li>
+  <li>2019年9月开盘，单价约3.83万元/㎡（网签均价3.53万元/㎡），主力总价约160-170万，月均去化36套</li>
+  <li>表外收费：3,000元/㎡（装修费）</li>
+</ul>
+<div class="table-wrap"><table>
+  <thead><tr><th>面积段</th><th>存量套数</th><th>销售套数</th><th>销售面积(㎡)</th><th>网签均价(万元/㎡)</th></tr></thead>
+  <tbody>
+    <tr><td>36-43㎡</td><td>586</td><td>182</td><td>7,777</td><td>3.50</td></tr>
+    <tr><td>47-51㎡</td><td>63</td><td>6</td><td>—</td><td>3.47</td></tr>
+    <tr><td>73-87㎡</td><td>38</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>总计</td><td>687</td><td>188</td><td>8,160</td><td>3.50</td></tr>
+  </tbody>
+</table></div>
+
+<!-- ════════════ CHAPTER 11: PRICING ════════════ -->
+<h2>十一、价格定位</h2>
+
+<h3>11.1 层高价差比</h3>
+<p>本案相对于4.2米LOFT的溢价比例定位：</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>层高</th><th>溢价比例</th></tr></thead>
+  <tbody>
+    <tr><td>4.2米</td><td>100%（基准）</td></tr>
+    <tr><td>3.2米</td><td>80%</td></tr>
+    <tr><td>5.9米</td><td>135%</td></tr>
+  </tbody>
+</table></div>
+
+<p><strong>参考案例：</strong></p>
+<ul>
+  <li>申花板块·汉港武林汇：3.5米平层售价2.6万 vs 4.2米LOFT售价3.5万，比值0.75</li>
+  <li>祥符板块·万科杭行道：3.2米平层售价2.3万 vs 4.2米LOFT售价2.7万（比值0.85），平层与双钥匙比值0.66</li>
+  <li>平层与4.2米LOFT产品均价比值在0.75-0.85之间，本案取值0.8</li>
+  <li>4.8米双钥匙相对于4.2米LOFT溢价30%，考虑到本案是5.9米，适当提升溢价比值，约35%</li>
+</ul>
+
+<h3>11.2 方法一：市场比较法</h3>
+<p>4.2米层高产品价格推导——选取武林之光、广宇东港空间、华润中央车站广场、杭州新天地四个竞品进行多维评分对比。</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>评判指标</th><th>权重</th><th>武林之光<br>4.2米LOFT</th><th>广宇东港空间<br>4.8米双钥匙</th><th>华润中央车站广场<br>4.2米双钥匙</th><th>杭州新天地<br>3.1米平层</th><th>本案<br>4.2米LOFT</th></tr></thead>
+  <tbody>
+    <tr><td>位置</td><td>15%</td><td>10（城市之星综合体内，距本案1公里）</td><td>10</td><td>9.5（城东新城核心区，距东站1.4公里）</td><td>10</td><td>9.8</td></tr>
+    <tr><td>交通</td><td>20%</td><td>10（通达性较好，距地铁500米）</td><td>9.5</td><td>9.5（和三条地铁线、东站无缝对接）</td><td>10</td><td>10</td></tr>
+    <tr><td>配套</td><td>10%</td><td>10（占地500亩城市之星配套）</td><td>10</td><td>8.5</td><td>10（180万㎡新天地商圈）</td><td>10（自身11万㎡商业配套）</td></tr>
+    <tr><td>层高&产品类型</td><td>25%</td><td>10</td><td>8（4.8米双钥匙）</td><td>9.5</td><td>10</td><td>7.5</td></tr>
+    <tr><td>装修标准</td><td>10%</td><td>10（精装，标准高）</td><td>10</td><td>8.5</td><td>9.5</td><td>9.5</td></tr>
+    <tr><td>主力户型</td><td>20%</td><td>10（45-55㎡）</td><td>10（40-65㎡）</td><td>9.5（65㎡大面宽）</td><td>9.5（55-73㎡全朝南）</td><td>9（50-60㎡）</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>总评分</td><td>100%</td><td>9.4</td><td>9.3</td><td>9.9</td><td>9.2</td><td>8.7</td></tr>
+    <tr><td>2019年成交均价</td><td></td><td>4.00万元/㎡</td><td>3.53万元/㎡</td><td>3.52万元/㎡</td><td>2.94万元/㎡</td><td></td></tr>
+    <tr><td>可比价格</td><td></td><td>0.4</td><td>0.4</td><td>0.4</td><td>0.3</td><td></td></tr>
+    <tr style="font-weight:bold;background:#e8f8ee"><td>本案价格预估</td><td></td><td></td><td></td><td></td><td></td><td>3.20万元/㎡</td></tr>
+  </tbody>
+</table></div>
+
+<h3>11.3 方法二：住宅价格比值法</h3>
+<p>4.2米层高产品价格推导——基于酒店式公寓与住宅的历史比价关系。从竞品数据可得出，4.2米LOFT公寓售价是住宅售价<strong>70%左右</strong>时，销售流量可以实现明显倍级突破。</p>
+<div class="table-wrap"><table>
+  <thead><tr><th>板块</th><th>酒店式公寓项目</th><th>产品类型</th><th>售价(万元/㎡)</th><th>住宅项目</th><th>售价(万元/㎡)</th><th>比值</th></tr></thead>
+  <tbody>
+    <tr><td>武林新城</td><td>武林之光</td><td>4.2/4.8米</td><td>4.3</td><td>绿城春月锦庐（参考）</td><td>5.0</td><td>86%</td></tr>
+    <tr><td>城东新城</td><td>华润中央车站广场一期</td><td>4.2米LOFT</td><td>3.1</td><td>住宅</td><td>4.5</td><td>69%</td></tr>
+    <tr><td>城东新城</td><td>华润中央车站广场二期</td><td>4.2米双钥匙</td><td>3.5</td><td>住宅</td><td>4.65</td><td>75%</td></tr>
+    <tr><td>城东新城</td><td>东渡酩悦</td><td>4.8米双钥匙</td><td>4.0</td><td>住宅</td><td>4.65</td><td>86%</td></tr>
+    <tr><td>城东新城</td><td>广宇东港空间</td><td>4.8米双钥匙</td><td>3.6</td><td>住宅</td><td>4.3</td><td>84%</td></tr>
+    <tr><td>城东新城</td><td>华润中央车站广场</td><td>4.2米LOFT</td><td>3.5</td><td>世茂钱塘天誉</td><td>4.7</td><td>0.74</td></tr>
+    <tr><td>华家池板块</td><td>绿地华家池印</td><td>4.2米LOFT</td><td>3.6/4.1</td><td>绿地华家池印（二手房）</td><td>6</td><td>0.6/0.7</td></tr>
+    <tr><td>之江板块</td><td>和昌云潮</td><td>4.2米LOFT</td><td>2.6</td><td>珊瑚世纪</td><td>3.7</td><td>0.7</td></tr>
+    <tr><td>之江板块</td><td>群升万国天地</td><td>4.2米LOFT</td><td>2.7</td><td>祥生云境</td><td>3.8</td><td>0.71</td></tr>
+  </tbody>
+</table></div>
+<p>以次新房价格（4万/㎡）为基准售价2.8万/㎡，以新房价格（4.7万/㎡）为基准售价3.3万/㎡，综合考虑取均值，均价为<strong>3.05万/㎡</strong>。</p>
+
+<h3>11.4 方法三：租金回报率法</h3>
+<ul>
+  <li><strong>租金定位：</strong>距离本案800米的克拉公馆（3.1米平层，50-65㎡）租金3,500-4,000元/月具有较大参考意义，本案配套和交通通达性好于克拉公馆，且武林城市之星的落成将大大提升区域租金水平。主力户型面积段和层高与克拉公馆基本相同，因此50-60㎡平层租金取值<strong>4,000元/月</strong></li>
+  <li><strong>租金回报率：</strong>根据酒店式公寓回报率的调研，竞争区域的租金回报率在3%-4%，其中<strong>3.5%较为普遍</strong></li>
+  <li><strong>价格推导：</strong>3.2米平层以户型50-60㎡、租金4,000元/月、租金回报率3.5%为基准，售价可定为<strong>2.5万元/㎡</strong>。3.2米平层的售价是4.2米LOFT售价的80%，以此为基准，4.2米LOFT售价定为<strong>3.1万元/㎡</strong></li>
+</ul>
+
+<h3>11.5 综合定价结论</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>方法</th><th>预判价格（4.2米LOFT）</th><th>权重</th></tr></thead>
+  <tbody>
+    <tr><td>市场比较法</td><td>3.20万元/㎡</td><td>40%</td></tr>
+    <tr><td>住宅价格推算法</td><td>3.05万元/㎡</td><td>30%</td></tr>
+    <tr><td>租售比推算法</td><td>3.10万元/㎡</td><td>30%</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>加权预判价格</td><td>3.10万元/㎡</td><td>100%</td></tr>
+  </tbody>
+</table></div>
+
+<h3>11.6 整盘定价与总销</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>层高</th><th>溢价比例</th><th>可售面积(㎡)</th><th>销售价格(元/㎡)</th><th>销售额(亿元)</th></tr></thead>
+  <tbody>
+    <tr><td>4.2米</td><td>100%</td><td>30,639</td><td>31,000</td><td>9.5</td></tr>
+    <tr><td>3.2米</td><td>80%</td><td>19,869</td><td>25,000</td><td>5.0</td></tr>
+    <tr><td>5.9米</td><td>135%</td><td>5,757</td><td>42,000</td><td>2.4</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>整体均价</td><td></td><td>56,265</td><td>30,000</td><td>16.9</td></tr>
+  </tbody>
+</table></div>
+
+<!-- ════════════ CHAPTER 12: SALES FORECAST ════════════ -->
+<h2>十二、去化预估与客户定位</h2>
+
+<h3>12.1 去化速度预估</h3>
+<p>预计本案的去化速度为<strong>50-60套/月</strong>，年销量600-700套。推导逻辑：</p>
+<ul>
+  <li>区域内110-150万是流量型总价，月均去化可达80-90套/月</li>
+  <li>150-170万左右的产品月均去化速度30-40套</li>
+  <li>170-200万的总价月均去化20-25套</li>
+  <li>本案主力面积段45-60㎡，主力总价段110-185万，参考竞品流量并结合销售实力，预估流量速度50-60套/月</li>
+</ul>
+<div class="table-wrap"><table>
+  <thead><tr><th>层高</th><th>主力户型</th><th>销售均价</th><th>主力总价</th><th>套数比</th></tr></thead>
+  <tbody>
+    <tr><td>3.2米</td><td>45-60㎡</td><td>2.50万元/㎡</td><td>110-150万</td><td>33%</td></tr>
+    <tr><td>4.2米</td><td>40-60㎡</td><td>3.10万元/㎡</td><td>125-185万</td><td>57%</td></tr>
+    <tr><td>5.9米</td><td>55-60㎡</td><td>4.20万元/㎡</td><td>230-250万</td><td>10%</td></tr>
+  </tbody>
+</table></div>
+
+<h3>12.2 客户来源</h3>
+<ul>
+  <li><strong>本地客户：</strong>占比5-6成，以周边江干老小区原住民为主，具有地域粘性，看好区域发展</li>
+  <li><strong>外地客户：</strong>以金华、义乌、温州投资客为主，宁波、台州、丽水等区域投资客为辅</li>
+  <li><strong>中介分销为主力成交途径：</strong>外地客户基本为中介带客，杭州客户中介带看与自然来访基本持平</li>
+  <li><strong>成熟板块自用客户占比超过一半，热点板块比较吸引投资客</strong></li>
+</ul>
+
+<h3>12.3 客户特征</h3>
+<ul>
+  <li><strong>外地客户职业特征：</strong>① 公务员、事业单位（教师、医生、银行等）收入稳定群体；② 各行业小企业主、私营老板，有一定资金实力</li>
+  <li><strong>外地客户年龄：</strong>35-50岁</li>
+  <li><strong>购买动机：</strong>看好杭州省会城市未来的发展潜力；看好该区域的配套、交通升级；为在杭上学或即将来杭上学的小孩购房，作为首批资产配置；短期内考虑出租</li>
+  <li><strong>本地客户特征：</strong>周边小区分巢为主（父母为子女及养老客户购房），也有投资兼自用打算；纯自用（过渡、分巢、养老等）和投资兼自用的客户为主</li>
+</ul>
+
+<h3>12.4 各竞品客户特征对比</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>项目</th><th>客户结构</th><th>客户特征</th><th>年龄</th><th>购买动机</th></tr></thead>
+  <tbody>
+    <tr><td>武林之光</td><td>本地50%:下城区/城北<br>外地50%:金华义乌/温州</td><td>①公务员、事业单位员工（教师/医生/银行）；②各行业小企业主、私营老板</td><td>35-50岁</td><td>看好杭州发展潜力；看好区域配套交通升级；为在杭上学小孩购房；首批资产配置</td></tr>
+    <tr><td>华润中央车站广场</td><td>外地60%:金华义乌40%+温州30%<br>本地40%:江干/下城为主</td><td>①公务员、事业单位（60%）；②小企业主、私营老板（40%）</td><td>40-50岁</td><td>看好杭州省会发展；看中地铁口交通配套；为在杭上学小孩准备；短期出租</td></tr>
+    <tr><td>复地壹中心</td><td>本地自用客占比较高（近6成），自用客户占50%</td><td>—</td><td>—</td><td>—</td></tr>
+    <tr><td>普大福地</td><td>杭州客户80-90%：周边社区60-70%/产业园市场10-20%，无分销</td><td>投资为主，看中租金回报</td><td>—</td><td>—</td></tr>
+  </tbody>
+</table></div>
+
+<!-- ════════════ CHAPTER 13: RENOVATION ════════════ -->
+<h2>十三、装修设计方案</h2>
+
+<h3>13.1 现代简约风格</h3>
+<p>现代简约，通透清新，有效增加空间感和舒适感，提升品质感。</p>
+<ul>
+  <li><strong>要点1：造型简洁。</strong>小户型居住人群多以年轻群体为主，在家装风格上适合较为简洁的风格，不宜采用太复杂的造型图案和设施。例如使用石膏线而非吊顶来进行顶部装饰，同时选择简单造型的灯具，线条明快，会让空间变得更加宽敞</li>
+  <li><strong>要点2：浅色调为主。</strong>小户型空间有限，在色彩的搭配上尤为重要。建议选择白色、原木色、米黄色等浅色系，让空间视线感变强。同时，为避免大量的浅色系太过寡淡，可以用绿植、色彩鲜艳的抱枕或椅子，甚至装饰画来进行点缀调节</li>
+  <li><strong>要点3：有层次感的布光。</strong>以造型简洁的吸顶灯为主灯，配合射灯及各种局部辅助照明灯具，通过不同的光源效果交叉使用，形成层次感</li>
+</ul>
+
+<h3>13.2 典雅轻奢风格</h3>
+<p>以简约风格为基础，通过精致的软装元素来凸显质感，彰显高品质的生活方式。</p>
+<ul>
+  <li><strong>要点1：色彩多选择带有高级感的中性色。</strong>例如驼色、象牙白、奶咖、黑色及碳灰色，演绎"低调的奢华"，令空间质感更为饱满。驼色、象牙白倾向于高雅调性，简约时髦且富有轻奢气质</li>
+  <li><strong>要点2：奢华材质的混搭组合。</strong>轻奢风格注重设计手法简洁、大气的同时，也重视品质和设计感，通过材质上的奢华，不着痕迹地透露出对于精致、考究生活的追求</li>
+</ul>
+
+<h3>13.3 公区设计</h3>
+<p>关注入户大堂和首层电梯厅。设置入户大堂，采用纯大理石地面，以艺术饰品、精美挂画进行装饰，WIFI和洗手间配备完整；设置精美气派电梯厅。</p>
+
+<h3>13.4 装修报价</h3>
+<p>装修报价参考：售楼处及样板房总价<strong>1,000万元</strong>；公共区域装修约<strong>500元/㎡</strong>；房源内部装修约<strong>2,000元/㎡</strong>。</p>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>序号</th><th>项目</th><th>品牌/型号</th><th>单位</th><th>单价(元)</th></tr></thead>
+  <tbody>
+    <tr><td colspan="5"><strong>装饰安装工程（客厅餐厅）</strong></td></tr>
+    <tr><td>1</td><td>轻钢龙骨石膏板吊顶</td><td>龙牌</td><td>㎡</td><td>165</td></tr>
+    <tr><td>2</td><td>踢脚线安装</td><td>定制</td><td>㎡</td><td>55</td></tr>
+    <tr><td>3</td><td>墙、地面铺贴瓷砖</td><td>美陶</td><td>㎡</td><td>330</td></tr>
+    <tr><td>4</td><td>乳胶漆</td><td>立邦</td><td>㎡</td><td>68</td></tr>
+    <tr><td>5</td><td>厨房橱柜及台面</td><td>定制</td><td>套</td><td>3,000</td></tr>
+    <tr><td colspan="5"><strong>装饰安装工程（卫生间）</strong></td></tr>
+    <tr><td>6</td><td>卫生间地砖铺贴</td><td>美陶或同等品牌</td><td>㎡</td><td>330</td></tr>
+    <tr><td>7</td><td>大理石台盆制作</td><td>定制</td><td>个</td><td>2,760</td></tr>
+    <tr><td>8</td><td>淋浴房钢化玻璃安装</td><td>定制</td><td>套</td><td>3,000</td></tr>
+    <tr><td>9</td><td>卫生间成品面门</td><td>定制</td><td>个</td><td>1,550</td></tr>
+    <tr><td>10</td><td>五金件</td><td>定制</td><td>套</td><td>650</td></tr>
+    <tr><td colspan="5"><strong>装饰安装工程（卧室）</strong></td></tr>
+    <tr><td>11</td><td>实木复合地板</td><td>林昌</td><td>㎡</td><td>440</td></tr>
+    <tr><td>12</td><td>踢脚线安装</td><td>定制</td><td>㎡</td><td>55</td></tr>
+    <tr><td colspan="5"><strong>水电安装工程</strong></td></tr>
+    <tr><td>13</td><td>水电安装</td><td>西门子、欧普、科勒</td><td>㎡</td><td>300</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td colspan="4">合计（成套产品按套均50㎡摊销）</td><td>1,962元/㎡</td></tr>
+  </tbody>
+</table></div>
+
+<!-- ════════════ FINAL CONCLUSION ════════════ -->
+<div class="ch-summary"><strong>▸ 全报告总结：</strong>杭州***城市厨房项目是武林新城核心地段的高安全边际存量资产包销机会。核心逻辑清晰：① 省属国企资产方底价23,000元/㎡ → 精装修赋能后30,000元/㎡出售 → 7,000元/㎡溢价空间，非融资净利润9,173万元；② "限酒令"政策下小面积公寓稀缺性红利；③ 核心竞争圈无有效竞品，定价3.0万元/㎡显著低于周边3.5-4.3万元/㎡，主力总价110-185万匹配区域流量区间；④ 18个月快速去化退出，去化率50%即可盈亏平衡；⑤ 保守情景下IRR 155%、ROE 26%，即使销售均价下降至29,000元/㎡或合作底价上升至24,000元/㎡，IRR仍维持78-80%。</div>
+
+<div class="disclaimer">
+  <h3 style="color:#2c3e50;margin-bottom:8px">免责声明</h3>
+  <p>本报告由上海虎鲸云科技有限公司编制，基于项目原始投资方案数据整理分析，仅供内部决策参考，不构成投资建议。报告中的市场数据、财务测算和竞争分析基于2020年3月时点的可得信息，实际市场条件和政策环境可能发生重大变化。投资者应在做出最终投资决策前独立验证关键假设。</p>
+  <p style="margin-top:8px"><strong>关于上海虎鲸云科技有限公司：</strong>一家专注于深度调研与投资分析的咨询公司，致力于为企业和投资机构提供数据驱动的决策支持。</p>
+</div>
+
+<div class="footer">
+  <p>© 2026 上海虎鲸云科技有限公司 · 保留所有权利</p>
+  <p>Shanghai Orca Cloud Technology Co., Ltd.</p>
+</div>
+
+</div>
+
+<!-- ════════════ CHARTS JS ════════════ -->
+<script>
+Chart.register(ChartDataLabels);
+var G={grid:{color:'#e8e8e8',lineWidth:0.5},border:{display:false}};
+
+// 1. Investment Structure Doughnut
+new Chart(document.getElementById('chartInvestStructure'),{type:'doughnut',data:{labels:['保证金','房源装修','渠道分销','公区装修','人工成本','售楼处样板间','营销推广','物料成本','税费','净利润'],datasets:[{data:[10000,11253,7488,2813,2026,1000,675,506,4452,9173],backgroundColor:['#1a3a5c','#2471a3','#2980b9','#3498db','#5dade2','#85c1e9','#aed6f1','#d4e6f1','#e74c3c','#27ae60'],borderRadius:2}]},options:{responsive:true,plugins:{title:{display:true,text:'投资构成与利润分配 (万元)',font:{size:13,family:'Noto Sans SC'}},datalabels:{color:'#fff',font:{size:9,weight:'bold'},formatter:function(v,ctx){var n=ctx.chart.data.labels[ctx.dataIndex];return v>5000?n+'\n'+v+'万':''}}}}});
+
+// 2. Monthly Cash Flow Line
+new Chart(document.getElementById('chartCashFlow'),{type:'line',data:{labels:['4月','5月','6月','7月','8月','9月','10月','11月','12月','1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月','1月','2月'],datasets:[{label:'月度收入 (万元)',data:[0,0,0,0,2946,2314,2314,2946,2946,1473,1052,2020,2314,2104,2651,2946,2525,2104,2104,2525,1052,1052,0],borderColor:'#27ae60',backgroundColor:'rgba(39,174,96,0.08)',fill:true,tension:0.3,pointRadius:3},{label:'月度支出 (万元)',data:[5000,0,500,500,6407,1125,844,3376,0,0,0,0,0,4501,0,0,2813,0,0,0,0,0,0],borderColor:'#e74c3c',backgroundColor:'rgba(231,76,60,0.06)',fill:true,tension:0.3,pointRadius:3}]},options:{responsive:true,plugins:{title:{display:true,text:'月度资金流入流出 (万元)',font:{size:13,family:'Noto Sans SC'}}},scales:{y:{beginAtZero:true,title:{display:true,text:'万元'},grid:G.grid},x:{grid:G.grid}}}});
+
+// 3. Unit Type Distribution
+new Chart(document.getElementById('chartUnitMix'),{type:'bar',data:{labels:['3.2米平层','4.2米LOFT','5.9米'],datasets:[{label:'套数',data:[306,534,96],backgroundColor:['#3498db','#1a3a5c','#D4AF37'],borderRadius:4},{label:'可售面积 (㎡)',data:[19869,30639,5757],backgroundColor:['#85c1e9','#2471a3','#f39c12'],borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:'标高分布 — 套数与可售面积',font:{size:13,family:'Noto Sans SC'}},datalabels:{anchor:'end',align:'top',font:{size:10,weight:'bold'},formatter:function(v){return v}}},scales:{y:{beginAtZero:true,grid:G.grid},x:{grid:G.grid}}}});
+
+// 4. Competitor Price Comparison
+new Chart(document.getElementById('chartCompPrice'),{type:'bar',data:{labels:['本案\n(3.0万)','武林之光\n(4.3万)','广宇东港\n(3.5万)','华润中央\n(3.5万)','东渡酩悦\n(3.7万)','都会公馆\n(3.7万)','德信环翼\n(3.8万)','杭州新天地\n(3.0万)'],datasets:[{label:'销售均价 (万元/㎡)',data:[3.0,4.3,3.53,3.52,3.7,3.7,3.83,2.94],backgroundColor:function(c){return c.dataIndex===0?'#27ae60':'#2471a3'},borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:'竞品售价对比 — 本案 vs 周边竞品 (万元/㎡)',font:{size:13,family:'Noto Sans SC'}},legend:{display:false},datalabels:{anchor:'end',align:'top',color:'#333',font:{size:10,weight:'bold'},formatter:function(v){return v+'万'}}},scales:{y:{beginAtZero:false,min:2,max:5,title:{display:true,text:'万元/㎡'},grid:G.grid},x:{grid:G.grid}}}});
+
+// 5. Sensitivity Tornado
+new Chart(document.getElementById('chartSensitivity'),{type:'bar',data:{labels:['底价22,000','底价22,500','基准(23,000/30,000)','底价23,500','底价24,000','售价29,000','售价29,500','售价30,500','售价31,000'],datasets:[{label:'净利润 (万元)',data:[13002,11087,9173,7258,5343,5420,7297,11049,12925],backgroundColor:function(c){var v=c.raw;return v>=11000?'#27ae60':v>=9000?'#f39c12':v>=7000?'#e67e22':'#e74c3c'},borderRadius:4}]},options:{indexAxis:'y',responsive:true,plugins:{title:{display:true,text:'敏感性分析 — 不同底价/售价情景下的净利润 (万元)',font:{size:13,family:'Noto Sans SC'}},legend:{display:false},datalabels:{anchor:'end',align:'right',color:'#333',font:{size:9,weight:'bold'},formatter:function(v){return v+'万'}}},scales:{x:{beginAtZero:true,title:{display:true,text:'万元'},grid:G.grid},y:{grid:G.grid}}}});
+</script>
+</body>
+</html>

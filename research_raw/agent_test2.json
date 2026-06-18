@@ -1,0 +1,427 @@
+{
+  "payloads": [
+    {
+      "text": "找到了。这是**官方 App Store 页面**直接截取的最新价格：\n\n---\n\n## 📱 Headspace\n- **月付：$12.99/月**\n- **年付：$69.99/年**（约 $5.83/月）\n- 来源：Apple App Store — [Headspace: Sleep & Meditation](https://apps.apple.com/us/app/headspace-meditation-sleep/id493145008)\n\n## 🧘 Calm\n- **月付：$14.99/月**\n- **年付：$69.99/年**（约 $5.83/月）\n- **终身：$399.99**\n- 来源：Apple App Store — [Calm](https://apps.apple.com/us/app/calm/id571800810)\n\n## 🧠 ADHD Coaching（美国）\n**每节课：$100–$250**，大多数来访者每周或隔周一次\n- **月均：$300–$600/月**（按每周一节课算）\n- 价格视教练资历、所在地区和套餐而定，部分机构提供月付套餐或浮动费率\n- 来源：CHADD (chadd.org)、ADDitude (additudemag.com) 的行业调研\n\n---\n\n**总结：** Calm 和 Headspace 年费一样都是 **$69.99**，但 Calm 月费贵 $2。ADHD 教练费用高出整整一个量级——顶得上 10–40 个冥想 App 月费。",
+      "mediaUrl": null
+    }
+  ],
+  "meta": {
+    "durationMs": 81936,
+    "agentMeta": {
+      "sessionId": "8742d6b5-e853-4a1f-ae02-151145545fe3",
+      "sessionFile": "C:\\Users\\黄志敏\\.openclaw\\agents\\main\\sessions\\b3842bcd-cf13-4fa7-a7db-48dc8ea60277.jsonl",
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "contextTokens": 1000000,
+      "agentHarnessId": "openclaw",
+      "usage": {
+        "input": 563741,
+        "output": 1575,
+        "cacheRead": 266752,
+        "reasoningTokens": 311,
+        "total": 106931
+      },
+      "lastCallUsage": {
+        "input": 73809,
+        "output": 354,
+        "cacheRead": 32768,
+        "cacheWrite": 0,
+        "reasoningTokens": 29,
+        "total": 106931
+      },
+      "promptTokens": 106577,
+      "contextBudgetStatus": {
+        "schemaVersion": 1,
+        "source": "pre-prompt-estimate",
+        "updatedAt": 1780760194371,
+        "provider": "deepseek",
+        "model": "deepseek-v4-flash",
+        "route": "fits",
+        "shouldCompact": false,
+        "estimatedPromptTokens": 187234,
+        "contextTokenBudget": 1000000,
+        "promptBudgetBeforeReserve": 980000,
+        "reserveTokens": 20000,
+        "effectiveReserveTokens": 20000,
+        "remainingPromptBudgetTokens": 792766,
+        "overflowTokens": 0,
+        "toolResultReducibleChars": 191843,
+        "messageCount": 337,
+        "unwindowedMessageCount": 337,
+        "sessionId": "8742d6b5-e853-4a1f-ae02-151145545fe3"
+      }
+    },
+    "aborted": false,
+    "systemPromptReport": {
+      "source": "run",
+      "generatedAt": 1780760193802,
+      "sessionId": "8742d6b5-e853-4a1f-ae02-151145545fe3",
+      "sessionKey": "agent:main:main",
+      "provider": "deepseek",
+      "model": "deepseek-v4-flash",
+      "workspaceDir": "C:\\Users\\黄志敏\\.openclaw\\workspace",
+      "bootstrapMaxChars": 12000,
+      "bootstrapTotalMaxChars": 60000,
+      "bootstrapTruncation": {
+        "warningMode": "always",
+        "warningShown": false,
+        "truncatedFiles": 0,
+        "nearLimitFiles": 0,
+        "totalNearLimit": false
+      },
+      "sandbox": {
+        "mode": "off",
+        "sandboxed": false
+      },
+      "systemPrompt": {
+        "chars": 29460,
+        "hash": "8e2ad9ea68f25da6abd5ef662df0e1f2d590c3389daa7028fefc1e15a3fa7919",
+        "projectContextChars": 12438,
+        "nonProjectContextChars": 17022
+      },
+      "injectedWorkspaceFiles": [
+        {
+          "name": "AGENTS.md",
+          "path": "C:\\Users\\黄志敏\\.openclaw\\workspace\\AGENTS.md",
+          "missing": false,
+          "rawChars": 8048,
+          "injectedChars": 8048,
+          "truncated": false
+        },
+        {
+          "name": "SOUL.md",
+          "path": "C:\\Users\\黄志敏\\.openclaw\\workspace\\SOUL.md",
+          "missing": false,
+          "rawChars": 1797,
+          "injectedChars": 1797,
+          "truncated": false
+        },
+        {
+          "name": "TOOLS.md",
+          "path": "C:\\Users\\黄志敏\\.openclaw\\workspace\\TOOLS.md",
+          "missing": false,
+          "rawChars": 910,
+          "injectedChars": 910,
+          "truncated": false
+        },
+        {
+          "name": "IDENTITY.md",
+          "path": "C:\\Users\\黄志敏\\.openclaw\\workspace\\IDENTITY.md",
+          "missing": false,
+          "rawChars": 508,
+          "injectedChars": 508,
+          "truncated": false
+        },
+        {
+          "name": "USER.md",
+          "path": "C:\\Users\\黄志敏\\.openclaw\\workspace\\USER.md",
+          "missing": false,
+          "rawChars": 457,
+          "injectedChars": 457,
+          "truncated": false
+        },
+        {
+          "name": "HEARTBEAT.md",
+          "path": "C:\\Users\\黄志敏\\.openclaw\\workspace\\HEARTBEAT.md",
+          "missing": false,
+          "rawChars": 151,
+          "injectedChars": 151,
+          "truncated": false
+        },
+        {
+          "name": "MEMORY.md",
+          "path": "C:\\Users\\黄志敏\\.openclaw\\workspace\\MEMORY.md",
+          "missing": false,
+          "rawChars": 142,
+          "injectedChars": 142,
+          "truncated": false
+        }
+      ],
+      "skills": {
+        "promptChars": 7949,
+        "hash": "0b22a36e1daf91a9f638c24cc32038779b79dd399b831fac6764d6abecf1770b",
+        "entries": [
+          {
+            "name": "Agent Browser",
+            "blockChars": 322
+          },
+          {
+            "name": "canvas",
+            "blockChars": 267
+          },
+          {
+            "name": "Data Analysis",
+            "blockChars": 670
+          },
+          {
+            "name": "diagram-maker",
+            "blockChars": 270
+          },
+          {
+            "name": "Excel / XLSX",
+            "blockChars": 511
+          },
+          {
+            "name": "find-skills",
+            "blockChars": 392
+          },
+          {
+            "name": "github",
+            "blockChars": 280
+          },
+          {
+            "name": "healthcheck",
+            "blockChars": 282
+          },
+          {
+            "name": "meme-maker",
+            "blockChars": 255
+          },
+          {
+            "name": "node-connect",
+            "blockChars": 285
+          },
+          {
+            "name": "node-inspect-debugger",
+            "blockChars": 281
+          },
+          {
+            "name": "notion",
+            "blockChars": 276
+          },
+          {
+            "name": "obsidian",
+            "blockChars": 294
+          },
+          {
+            "name": "self-improvement",
+            "blockChars": 643
+          },
+          {
+            "name": "skill-creator",
+            "blockChars": 263
+          },
+          {
+            "name": "skillhub-preference",
+            "blockChars": 342
+          },
+          {
+            "name": "spike",
+            "blockChars": 255
+          },
+          {
+            "name": "taskflow",
+            "blockChars": 285
+          },
+          {
+            "name": "taskflow-inbox-triage",
+            "blockChars": 295
+          },
+          {
+            "name": "Translate",
+            "blockChars": 241
+          },
+          {
+            "name": "weather",
+            "blockChars": 270
+          },
+          {
+            "name": "Word / DOCX",
+            "blockChars": 538
+          }
+        ]
+      },
+      "tools": {
+        "listChars": 0,
+        "schemaChars": 15664,
+        "entries": [
+          {
+            "name": "read",
+            "summaryChars": 298,
+            "summaryHash": "f8a1d7cf1ecfe02b1b5865c93387e6a5891e5079117b4fe18614b6f912521727",
+            "schemaChars": 304,
+            "schemaHash": "134f19bcabe3e29d63c5cebb38f1d2556759fd08adad6bc90a4b4d3cd1fb8441",
+            "propertiesCount": 3
+          },
+          {
+            "name": "edit",
+            "summaryChars": 326,
+            "summaryHash": "c498a85576e187d069e8e8ea4f70f81bddd57829600d385ef61c4359fd634c9e",
+            "schemaChars": 834,
+            "schemaHash": "457e8bb9f800b21be76c4fd8c0e3078bf07ee9bf93ac82f39944c171bd8f6d84",
+            "propertiesCount": 2
+          },
+          {
+            "name": "write",
+            "summaryChars": 127,
+            "summaryHash": "cdb1c46027b22d1f1b923b47bfe297821d9fe589a9f9d92994961948060a4d89",
+            "schemaChars": 225,
+            "schemaHash": "e98a2484f667cf7c22d76ca103bf2022bf9113dc63fe38b899e71c328cb1e833",
+            "propertiesCount": 2
+          },
+          {
+            "name": "exec",
+            "summaryChars": 791,
+            "summaryHash": "15c0ba2bd612044a1428dd2d52cd5b99e88f81cf8fcf00418e173806d635bc43",
+            "schemaChars": 1187,
+            "schemaHash": "0c03eeccccb7b7e97234d2c8245c6060e2b292588f02455eae20c60b61bb8bb8",
+            "propertiesCount": 12
+          },
+          {
+            "name": "process",
+            "summaryChars": 456,
+            "summaryHash": "55297e65d460e0e1e06e7fad4cedb75ffda8fac9fa8b10aa06d6cead3c5a76ea",
+            "schemaChars": 1074,
+            "schemaHash": "a2d30a25569f409d7e8539844c89a088044535388b24031d014577b96ed27c5c",
+            "propertiesCount": 12
+          },
+          {
+            "name": "cron",
+            "summaryChars": 3610,
+            "summaryHash": "262e6a7b421538d13ca6d79fc14616de3ea0c24fde8b050d6fa1652fe991e5c5",
+            "schemaChars": 7359,
+            "schemaHash": "a486139fdfec0cd8dc5bf05537b39f040400a8da3c04458e43a31faabef8759b",
+            "propertiesCount": 14
+          },
+          {
+            "name": "update_plan",
+            "summaryChars": 163,
+            "summaryHash": "ea18cc44224e849c68cdf0a4839c295c1b20daf2699e2fc2be4c4e1552327455",
+            "schemaChars": 489,
+            "schemaHash": "50cb08b8a29e72637eb6720e6f5f3786783824537574f05ee9ae7a5f4ecacc4b",
+            "propertiesCount": 2
+          },
+          {
+            "name": "sessions_list",
+            "summaryChars": 135,
+            "summaryHash": "c7e411ae02e3adff5504aaee48f02d262a8abb9152558a3172aae289e3b05faf",
+            "schemaChars": 435,
+            "schemaHash": "c29c6b82c36a2d95a88c8944f129929b2621ee2af6d17b2ab101d4d7e9633d89",
+            "propertiesCount": 9
+          },
+          {
+            "name": "sessions_history",
+            "summaryChars": 117,
+            "summaryHash": "f5d45b76f11a8ac63cc45d456fb6f675f0b1a2e191feb9671924cb5830058f03",
+            "schemaChars": 162,
+            "schemaHash": "ac33b8af2252262afe479236046f5a04bc018f1fcf24d1a8bf32743f0e867598",
+            "propertiesCount": 3
+          },
+          {
+            "name": "sessions_send",
+            "summaryChars": 224,
+            "summaryHash": "56fd935fc97400f8c60b16ae58268660a2d84d8014a60abed515576c45a6f307",
+            "schemaChars": 275,
+            "schemaHash": "f1fbaa412fe6b6aee102234c87c5aa140f39c9086f9bae6e1e9691309a602ffb",
+            "propertiesCount": 5
+          },
+          {
+            "name": "sessions_spawn",
+            "summaryChars": 332,
+            "summaryHash": "5ced554d0c09b9c71fa003139eca7871bbfdc0917a323fc17af2a9faec46c5b7",
+            "schemaChars": 1250,
+            "schemaHash": "2d1670783c8e0c6cae4a1d0a2bdcc059520837661a88702e827905e742a194c9",
+            "propertiesCount": 17
+          },
+          {
+            "name": "sessions_yield",
+            "summaryChars": 79,
+            "summaryHash": "f3782fc41c1522657e1d3494f486a2df998fed38a6b89dcf7f6934fb41424320",
+            "schemaChars": 60,
+            "schemaHash": "b1c4c753820bc3096d85ef7a266a14c9fbe12450536db58076b75bb61d14dbbb",
+            "propertiesCount": 1
+          },
+          {
+            "name": "subagents",
+            "summaryChars": 132,
+            "summaryHash": "1c2ffd38549c0444b118d43736fc4b875ea1aaabc446bbf8bc1fc4ee9180cca4",
+            "schemaChars": 122,
+            "schemaHash": "c4a241d2c3d46ba7985abfce4d3fcd63298ce81f89d49183c8f3d584c48d0c33",
+            "propertiesCount": 2
+          },
+          {
+            "name": "session_status",
+            "summaryChars": 278,
+            "summaryHash": "71177e543dc6235bad4b1a26761995681dcec27ab58dcb4f4f8a7fc9a7b2b5aa",
+            "schemaChars": 89,
+            "schemaHash": "d2995f3d69d126e98ac93eec3c2a9fe5556925bd7979a8e4b6b5a2bf62d329dd",
+            "propertiesCount": 2
+          },
+          {
+            "name": "web_search",
+            "summaryChars": 65,
+            "summaryHash": "b38e9b3c079beaa988d3c576303660b91a55c2e72f56351da04160529173273f",
+            "schemaChars": 991,
+            "schemaHash": "3879e368875d824b14e0e683f81408824e9a2a5850fa2f8514a68caebda54d18",
+            "propertiesCount": 12
+          },
+          {
+            "name": "web_fetch",
+            "summaryChars": 93,
+            "summaryHash": "8875afbb51bd63673e5e6836ca31eeda73914a464862665cd73b346e28d28fd5",
+            "schemaChars": 317,
+            "schemaHash": "d2d8ad58a1b84d849dd16142282aff6c5606f7b0e3d08405e1b740a6a79e6bcc",
+            "propertiesCount": 3
+          },
+          {
+            "name": "memory_search",
+            "summaryChars": 605,
+            "summaryHash": "0f918d28864d3682ae77731f149273997c84773592a466b18c7cd0121b599a05",
+            "schemaChars": 250,
+            "schemaHash": "088cd2a3d3a47b251429ff7c56844cdedd1c45c3af0fa8bfaf7aa795766976bf",
+            "propertiesCount": 4
+          },
+          {
+            "name": "memory_get",
+            "summaryChars": 239,
+            "summaryHash": "bff1141a3da31a345c550337417efc9ace4da2909004606c727c59ca1a294495",
+            "schemaChars": 241,
+            "schemaHash": "78f5d58460a82f9104deebad2f1873a8cde05d1ce7328b3ba4da6e994653e70a",
+            "propertiesCount": 4
+          }
+        ]
+      },
+      "currentTurn": {
+        "promptChars": 143,
+        "runtimeContextChars": 0
+      }
+    },
+    "finalPromptText": "Search for: Headspace monthly price 2025, Calm monthly price 2025, ADHD coaching average monthly cost US. Return exact prices with source URLs.",
+    "finalAssistantVisibleText": "找到了。这是**官方 App Store 页面**直接截取的最新价格：\n\n---\n\n## 📱 Headspace\n- **月付：$12.99/月**\n- **年付：$69.99/年**（约 $5.83/月）\n- 来源：Apple App Store — [Headspace: Sleep & Meditation](https://apps.apple.com/us/app/headspace-meditation-sleep/id493145008)\n\n## 🧘 Calm\n- **月付：$14.99/月**\n- **年付：$69.99/年**（约 $5.83/月）\n- **终身：$399.99**\n- 来源：Apple App Store — [Calm](https://apps.apple.com/us/app/calm/id571800810)\n\n## 🧠 ADHD Coaching（美国）\n**每节课：$100–$250**，大多数来访者每周或隔周一次\n- **月均：$300–$600/月**（按每周一节课算）\n- 价格视教练资历、所在地区和套餐而定，部分机构提供月付套餐或浮动费率\n- 来源：CHADD (chadd.org)、ADDitude (additudemag.com) 的行业调研\n\n---\n\n**总结：** Calm 和 Headspace 年费一样都是 **$69.99**，但 Calm 月费贵 $2。ADHD 教练费用高出整整一个量级——顶得上 10–40 个冥想 App 月费。",
+    "finalAssistantRawText": "找到了。这是**官方 App Store 页面**直接截取的最新价格：\n\n---\n\n## 📱 Headspace\n- **月付：$12.99/月**\n- **年付：$69.99/年**（约 $5.83/月）\n- 来源：Apple App Store — [Headspace: Sleep & Meditation](https://apps.apple.com/us/app/headspace-meditation-sleep/id493145008)\n\n## 🧘 Calm\n- **月付：$14.99/月**\n- **年付：$69.99/年**（约 $5.83/月）\n- **终身：$399.99**\n- 来源：Apple App Store — [Calm](https://apps.apple.com/us/app/calm/id571800810)\n\n## 🧠 ADHD Coaching（美国）\n**每节课：$100–$250**，大多数来访者每周或隔周一次\n- **月均：$300–$600/月**（按每周一节课算）\n- 价格视教练资历、所在地区和套餐而定，部分机构提供月付套餐或浮动费率\n- 来源：CHADD (chadd.org)、ADDitude (additudemag.com) 的行业调研\n\n---\n\n**总结：** Calm 和 Headspace 年费一样都是 **$69.99**，但 Calm 月费贵 $2。ADHD 教练费用高出整整一个量级——顶得上 10–40 个冥想 App 月费。",
+    "replayInvalid": false,
+    "livenessState": "working",
+    "stopReason": "stop",
+    "executionTrace": {
+      "winnerProvider": "deepseek",
+      "winnerModel": "deepseek-v4-flash",
+      "attempts": [
+        {
+          "provider": "deepseek",
+          "model": "deepseek-v4-flash",
+          "result": "success",
+          "stage": "assistant"
+        }
+      ],
+      "fallbackUsed": false,
+      "runner": "embedded"
+    },
+    "requestShaping": {
+      "authMode": "auth-profile",
+      "thinking": "max"
+    },
+    "toolSummary": {
+      "calls": 13,
+      "tools": [
+        "web_fetch"
+      ],
+      "failures": 1
+    },
+    "completion": {
+      "stopReason": "stop",
+      "finishReason": "stop"
+    },
+    "transport": "embedded",
+    "fallbackFrom": "gateway"
+  }
+}

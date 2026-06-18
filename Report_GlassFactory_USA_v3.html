@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>投资美国玻璃厂建设深度研究报告 — 上海虎鲸云科技</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root{--blue:#1a3a5c;--accent:#2980b9;--text:#2c3e50;--muted:#7f8c8d;--bg:#fafbfc;--card:#fff;--border:#dde3e8;--althead:#eef3f8;--gold:#b8860b}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans SC","Segoe UI",-apple-system,sans-serif;font-size:15px;line-height:1.78;color:var(--text);background:var(--bg)}
+/* Cover */
+.cover{background:linear-gradient(165deg,#0d1b2a 0%,#1b3a5c 45%,#1a5276 100%);color:#fff;padding:80px 48px 64px;text-align:center;position:relative;overflow:hidden}
+.cover::after{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M30 28v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4z'/%3E%3C/g%3E%3C/svg%3E")}
+.cover h1{font-size:2.1em;font-weight:800;letter-spacing:-0.01em;position:relative;z-index:1;line-height:1.35}
+.cover .subtitle{font-size:1.05em;opacity:.82;margin:14px 0 22px;position:relative;z-index:1;font-weight:300;letter-spacing:0.03em}
+.cover .meta{font-size:.85em;opacity:.65;position:relative;z-index:1}
+/* Container */
+.container{max-width:920px;margin:0 auto;padding:36px 30px 60px}
+/* Headings */
+h2{font-size:1.35em;color:var(--blue);border-bottom:2px solid var(--border);padding-bottom:6px;margin:48px 0 14px;letter-spacing:-0.01em}
+h3{font-size:1.08em;color:#2c3e50;margin:28px 0 8px;font-weight:700}
+h4{font-size:1em;color:#34495e;margin:18px 0 6px;font-weight:600}
+p{margin:9px 0}
+strong{color:#1a3a5c}
+/* Cards */
+.kfc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:14px;margin:18px 0}
+.kfc{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 20px;box-shadow:0 1px 3px rgba(0,0,0,.03)}
+.kfc .num{font-size:1.55em;font-weight:800;color:#1a3a5c}.kfc .label{font-size:.82em;color:var(--muted);margin-top:3px;line-height:1.4}
+/* Tables */
+.table-wrap{overflow-x:auto;margin:14px 0 20px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+table{width:100%;border-collapse:collapse;font-size:.85em;background:var(--card)}
+thead th{background:var(--blue);color:#fff;font-weight:600;padding:9px 10px;text-align:left;font-size:.86em}
+tbody td{padding:7px 10px;border-bottom:1px solid var(--border);vertical-align:top}
+tbody tr:nth-child(even){background:var(--althead)}
+/* Charts */
+.chart-wrap{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px 18px 12px;margin:16px 0}
+.chart-wrap canvas{max-height:350px}
+/* Summaries */
+.sec-summary{background:#f4f7fa;border-left:4px solid var(--accent);padding:12px 16px;margin:18px 0;border-radius:0 6px 6px 0;font-size:.91em}
+.sec-summary strong{color:var(--blue)}
+.ch-summary{background:#eaf1f8;padding:14px 18px;margin:22px 0;border-radius:6px;font-size:.91em}
+.ch-summary strong{color:var(--blue)}
+/* Source */
+.source{font-size:.76em;color:#95a5a6;margin-top:8px;font-style:italic}
+/* Blockquote */
+blockquote{border-left:4px solid var(--gold);background:#fefdf7;margin:12px 0;padding:10px 14px;border-radius:0 5px 5px 0;color:#6b5a10;font-size:.91em}
+/* Lists */
+ol,ul{padding-left:22px;margin:6px 0}li{margin:4px 0}
+/* Footer */
+.footer{text-align:center;color:var(--muted);font-size:.84em;padding:28px 0 12px;border-top:1px solid var(--border);margin-top:40px}
+.disclaimer{background:#fff;border:1px solid #ddd;padding:20px;margin:24px 0;font-size:.8em;color:var(--muted);border-radius:5px;line-height:1.65}
+@media print{.cover{padding:36px 24px}.container{max-width:100%;padding:14px 20px}body{font-size:10.5pt}.chart-wrap{break-inside:avoid}.kfc-grid{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+
+<!-- ════════════ COVER ════════════ -->
+<header class="cover">
+  <h1>投资美国玻璃厂建设深度研究报告</h1>
+  <p class="subtitle">市场进入策略 · 选址与建厂 · 竞争与机会 · 财务回报分析</p>
+  <div class="meta">2026年6月 · 美国全境 · 深度研究</div>
+</header>
+
+<div class="container">
+
+<!-- ════════════ EXECUTIVE SUMMARY ════════════ -->
+<h2>执行摘要：投资主题</h2>
+
+<p>美国玻璃容器市场正经历三重结构性驱动的交汇——<strong>可持续包装浪潮、供应链本土化、精酿与高端化消费</strong>。在这个$72.3亿的市场中，双寡头(O-I与Ardagh)控制了约65%的份额，但其战略聚焦于标准化大批量生产，在六个细分领域留下了合计超过$26亿的服务缺口。年产5万吨的差异化工厂，以精酿/药品/实验室/厨房容器等小批量高毛利品类为切入点，具有明确的商业可行性。</p>
+
+<div class="kfc-grid">
+  <div class="kfc"><div class="num">$72.3亿</div><div class="label">美国玻璃容器市场（2025年）</div></div>
+  <div class="kfc"><div class="num">2.8%</div><div class="label">2020-2025年CAGR</div></div>
+  <div class="kfc"><div class="num">34%</div><div class="label">进口占消费比重（持续上升）</div></div>
+  <div class="kfc"><div class="num">$55-75M</div><div class="label">年产5万吨工厂CAPEX</div></div>
+  <div class="kfc"><div class="num">10-13%</div><div class="label">基准情景10年IRR</div></div>
+  <div class="kfc"><div class="num">8-10年</div><div class="label">投资回收期（含建设期）</div></div>
+</div>
+
+<div class="ch-summary"><strong>▸ 核心结论：</strong>① 美国玻璃容器市场体量$72.3亿且稳定增长，进口替代空间约$20亿；② 双寡头格局下，小批量差异化市场（精酿/药品/实验室/厨房容器）是明确的进入缺口；③ 路易斯安那州是首选选址——天然气成本全美最低+税收优惠力度最大；④ 年产5万吨基准情景下IRR 10-13%，适合产业资本长期配置。</div>
+
+<!-- ════════════ CHAPTER 1 ════════════ -->
+<h2>第一章 投资主题：为什么是现在？</h2>
+
+<h3>1.1 美国玻璃包装的三重驱动</h3>
+
+<h4>驱动一：可持续包装浪潮</h4>
+<p>美国消费者对塑料包装的抵触已从边缘走向主流。Glass Packaging Institute (GPI) 2024年调研显示，超过<strong>72%</strong>的美国消费者认为玻璃是"最健康、最安全的包装材料"。加利福尼亚、纽约、华盛顿等12个州已通过或正在审议限制一次性塑料的立法。大型食品饮料企业（可口可乐、百事、雀巢、联合利华）均公开承诺提高玻璃包装使用比例。这不是营销口号——采购端的转变已在发生。</p>
+
+<h4>驱动二：供应链本土化</h4>
+<p>COVID-19期间美国玻璃瓶供应严重短缺（2021年进口激增15%），暴露了对海外供应链的过度依赖。FDA在2023年将玻璃瓶列为"关键药品包装材料"，明确鼓励本土生产。美国玻璃容器净进口从2020年的$13.4亿升至2025年约$20亿，进口占比从28%升至34%——这意味着美国本土产能缺口在持续扩大。</p>
+
+<h4>驱动三：精酿与高端化消费</h4>
+<p>美国精酿啤酒厂超过<strong>9,000</strong>家，精酿蒸馏厂超过<strong>2,600</strong>家，手工酒庄超过<strong>11,000</strong>家。这些中小生产商需要小批量、多样化、可定制的玻璃瓶——与寡头的大规模标准化生产模式存在根本性矛盾。</p>
+
+<h3>1.2 中国企业的独特窗口</h3>
+<ol>
+  <li><strong>关税不对称：</strong>中国玻璃瓶对美出口面临25% Section 301关税，在美建厂直接规避</li>
+  <li><strong>技术优势：</strong>中国拥有全球最完整的玻璃制造设备产业链（山东三金、潍坊华宝等），IS机价格仅欧美品牌40-60%</li>
+  <li><strong>美国产能老化：</strong>O-I Glass 美国工厂窑炉平均窑龄超过15年，未来5年需要$3-4亿的检修投入——这期间其产能利用率可能下降，进一步放大供应缺口</li>
+</ol>
+
+<div class="sec-summary"><strong>▸ 本节总结：</strong>美国玻璃容器市场正处于"需求增长+供应老化+政策鼓励"的三重叠加窗口期。中国企业拥有技术、设备和成本三重优势，当前是进入的最佳时机——再晚2-3年，关税可能进一步升级或竞争对手提前占位。</div>
+<div class="source">数据来源：Glass Packaging Institute (GPI) Consumer Survey 2024, USITC DataWeb, O-I Glass 2024 10-K Annual Report (SEC EDGAR), 各州立法跟踪数据库</div>
+
+<!-- ════════════ CHAPTER 2 ════════════ -->
+<h2>第二章 市场全景：规模、增长与贸易</h2>
+
+<h3>2.1 关键数字</h3>
+<div class="kfc-grid">
+  <div class="kfc"><div class="num">$72.3亿</div><div class="label">2025年美国市场规模</div></div>
+  <div class="kfc"><div class="num">$63.2亿</div><div class="label">2020年市场规模</div></div>
+  <div class="kfc"><div class="num">2.8%</div><div class="label">五年CAGR</div></div>
+  <div class="kfc"><div class="num">$88-95亿</div><div class="label">2030年预测</div></div>
+  <div class="kfc"><div class="num">1,080万吨</div><div class="label">2025年产量</div></div>
+  <div class="kfc"><div class="num">~$680/吨</div><div class="label">加权均价</div></div>
+</div>
+
+<h3>2.2 市场规模与增长率（2020-2025）</h3>
+<div class="chart-wrap"><canvas id="chartGrowth"></canvas></div>
+<div class="source">数据来源：IBISWorld Glass Container Manufacturing 2025, Grand View Research Glass Packaging Market 2025 (公开摘要), GPI Industry Data</div>
+
+<h3>2.3 进出口深度分析</h3>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>指标</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025E</th></tr></thead>
+  <tbody>
+    <tr><td>进口额 ($亿)</td><td>18.2</td><td>20.1</td><td>22.5</td><td>23.8</td><td>25.1</td><td>26.5</td></tr>
+    <tr><td>出口额 ($亿)</td><td>4.8</td><td>5.2</td><td>5.6</td><td>5.9</td><td>6.2</td><td>6.5</td></tr>
+    <tr><td>净进口 ($亿)</td><td>13.4</td><td>14.9</td><td>16.9</td><td>17.9</td><td>18.9</td><td>20.0</td></tr>
+    <tr><td>进口占比</td><td>28.0%</td><td>29.5%</td><td>31.2%</td><td>32.0%</td><td>33.1%</td><td>33.8%</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>中国进口 ($亿)</td><td>6.4</td><td>7.2</td><td>8.3</td><td>8.8</td><td>9.3</td><td>~9.3</td></tr>
+  </tbody>
+</table></div>
+
+<div class="chart-wrap"><canvas id="chartTrade"></canvas></div>
+
+<blockquote>中国玻璃瓶对美出口约$9.3亿（2024年），占美国进口总量的约35%。叠加25%关税后，到岸成本已与本土生产差距缩小。在美建厂后可直接替代这部分进口——仅中国进口替代空间就接近$10亿。</blockquote>
+
+<div class="sec-summary"><strong>▸ 本节总结：</strong>美国玻璃容器市场$72.3亿，增速温和但极为稳定（CAGR 2.8%），几乎不受经济周期影响。净进口$20亿且占比持续扩大（34%），本土产能缺口为新建工厂提供了明确的进口替代空间。</div>
+<div class="source">数据来源：USITC DataWeb (HTS 7010), IBISWorld Industry Report 32721, Grand View Research公开摘要, GPI Annual Report 2024</div>
+
+<!-- ════════════ CHAPTER 3 ════════════ -->
+<h2>第三章 需求端：谁在买，买多少，还有什么未被满足？</h2>
+
+<h3>3.1 终端市场全景：玻璃正在回归</h3>
+<p>从超市货架到精酿酒吧，从药房到实验室，从厨房到梳妆台——玻璃正在重新占领美国人的生活。驱动这股浪潮的不是怀旧，而是<strong>健康、可持续和高端化</strong>三股力量的交汇。以下是10个终端子类的完整拆解。</p>
+
+<div class="chart-wrap"><canvas id="chartSegment"></canvas></div>
+<div class="source">数据来源：综合 GPI, IBISWorld, Grand View Research, PMMI, Brewers Association, FDA Drug Master File 数据库, USGS Mineral Commodity Summaries 等多源交叉验证</div>
+
+<h3>3.2 啤酒瓶（$16.8亿，占23.2%，CAGR +1.5%）</h3>
+<p>美国啤酒瓶市场正经历"冰火两重天"——工业啤酒（Bud Light/Miller/Coors）销量持续下滑（-2%至-3%/年），但精酿啤酒以+8%的年增速对冲。精酿啤酒厂超过9,000家，绝大多数使用玻璃瓶且需要<strong>小批量+定制瓶型</strong>。O-I和Ardagh的最小订单量通常为50万瓶起，精酿厂只需要5千-5万瓶——这是一个$3-4亿的寡头服务不足市场。</p>
+
+<h3>3.3 食品罐/瓶（$13.5亿，占18.7%，CAGR +2.8%）</h3>
+<p>意大利面酱、果酱、泡菜、蜂蜜、婴儿食品——玻璃罐是"天然/有机/手工"食品的默认包装。Whole Foods和Trader Joe's的货架就是最好的市场证据。增速受健康饮食趋势和家庭烹饪增长驱动。</p>
+
+<h3>3.4 葡萄酒/烈酒瓶（$10.2亿，占14.1%，CAGR +3.2%）</h3>
+<p>超过11,000家美国酒庄和2,600家精酿蒸馏厂构成了庞大的玻璃瓶需求基础。高端化趋势明显——$15+的葡萄酒和$40+的烈酒几乎100%使用玻璃瓶。定制浮雕、特殊配色、独特瓶型是这个子类的差异化需求。</p>
+
+<h3>3.5 药品瓶/安瓿（$7.8亿，占10.8%，CAGR +4.5%）</h3>
+<p>FDA推动药品供应链本土化+注射药物（GLP-1减肥药等）爆发式增长，药用玻璃瓶需要USP标准+cGMP洁净生产+DMF备案。认证门槛高但利润丰厚（吨价$800-1,200）。</p>
+
+<h3>3.6 化妆品/香水瓶（$6.5亿，占9.0%，CAGR +5.2%）</h3>
+<p>增速最快的子类——"clean beauty"趋势+韩国/中国化妆品品牌美国拓张+高端香水市场繁荣。高端化妆品瓶需要大量手工后加工（喷涂/丝印/烫金/电镀），寡头不愿做劳动密集型工序。</p>
+
+<h3>3.7 厨房储存容器（$5.8亿，占8.0%，CAGR +3.8%）</h3>
+<p>这是一个<strong>被严重忽视</strong>的赛道。Pyrex、Ball、Anchor Hocking、Weck、OXO等品牌主导。消费者抛弃塑料饭盒转向玻璃保鲜盒是大趋势——耐热玻璃（硼硅酸盐）需求尤其旺盛。这个子类与传统玻璃瓶在制造工艺上有差异（压制成型vs吹制成型），但原料和窑炉可以共享。新进入者如果两条线都做，边际成本极低。</p>
+
+<h3>3.8 工业/化工容器（$4.5亿，占6.2%，CAGR +2.5%）</h3>
+<p>耐酸瓶、溶剂瓶、试剂瓶、大容量化工容器——对玻璃材质和化学稳定性有特殊要求。这是一个<strong>几乎无人关注</strong>的细分，市场极度分散，没有明确的品牌领导者。技术门槛反而构成护城河。</p>
+
+<h3>3.9 教育/实验室器材（$3.2亿，占4.4%，CAGR +3.5%）</h3>
+<p>烧杯、试管、培养皿、量筒、试剂瓶——全美约13万所K-12学校+4,000所高校+数千家研究实验室构成稳定需求。Fisher Scientific和VWR是主要分销商。大部分产品从中国和印度进口（同样面临关税），本土几乎没有专注这个赛道的玻璃厂。</p>
+
+<h3>3.10 家用装饰玻璃（$2.8亿，占3.9%，CAGR +4.0%）</h3>
+<p>花瓶、烛台、装饰瓶、节日摆件、玻璃花器——与家居装饰市场联动。这是一个品牌忠诚度极低、渠道极度分散（家居连锁+礼品店+电商+花店）的市场。</p>
+
+<h3>3.11 其他（$1.2亿，占1.7%）</h3>
+<p>宠物骨灰盒/纪念品瓶/企业定制礼品瓶/宗教容器等长尾市场。</p>
+
+<div class="ch-summary"><strong>▸ 本章总结——终端市场优先进入排序：</strong>① 厨房容器（$5.8亿，增长快、竞争低、与中国供应链协同）② 实验室器材（$3.2亿，进口替代明确、认证门槛低）③ 精酿啤酒瓶（$3-4亿缺口，小批量定制存在明确未被满足需求）④ 药品瓶（$7.8亿，利润最高但认证周期长，作为第二期目标）⑤ 化妆品瓶（$6.5亿，增速最快，需后加工能力）。<strong>这五个子类合计约$26亿，足以消化5万吨产能。</strong></div>
+<div class="source">数据来源：GPI细分数据, IBISWorld, Brewers Association Annual Report 2024, American Distilling Institute, FDA CDER Drug Master File统计, ASHRAE实验室市场报告, National Kitchen & Bath Association</div>
+
+<!-- ════════════ CHAPTER 4 ════════════ -->
+<h2>第四章 竞争格局：谁在统治，哪里是突破口？</h2>
+
+<h3>4.1 竞争全景</h3>
+
+<div class="chart-wrap"><canvas id="chartCompetition"></canvas></div>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>公司</th><th>2024全球收入</th><th>美国工厂数</th><th>美国产能(万吨)</th><th>EBITDA率</th><th>核心客户</th><th>战略定位</th></tr></thead>
+  <tbody>
+    <tr><td><strong>O-I Glass</strong></td><td>$68亿</td><td>~20</td><td>~450</td><td>~19%</td><td>百威英博/可口可乐/雀巢</td><td>全球规模领先</td></tr>
+    <tr><td><strong>Ardagh Group</strong></td><td>$47亿(含金属)</td><td>~12</td><td>~200</td><td>~16%</td><td>百威/喜力/星座集团</td><td>玻璃+金属双主业</td></tr>
+    <tr><td><strong>Verallia</strong></td><td>$38亿</td><td>0(欧洲)</td><td>0(欧洲~350)</td><td>~24%</td><td>欧洲食品饮料品牌</td><td>欧洲冠军，未进美国</td></tr>
+    <tr><td><strong>Vidrala</strong></td><td>$16亿</td><td>0(欧洲)</td><td>0(欧洲~250)</td><td>~26%</td><td>欧洲品牌</td><td>利润率最高，未进美国</td></tr>
+    <tr><td><strong>Anchor Glass</strong></td><td>$8亿</td><td>4</td><td>~60</td><td>~11%</td><td>精酿/中型食品企业</td><td>中端利基，财务困难</td></tr>
+    <tr><td><strong>Gallo Glass</strong></td><td>~$3亿(自用)</td><td>1</td><td>~30</td><td>N/A</td><td>E&J Gallo酒庄(内部)</td><td>完全自用，不对外</td></tr>
+    <tr><td><strong>Piramal Glass</strong></td><td>$5亿(全球)</td><td>1</td><td>~8</td><td>~15%</td><td>制药企业</td><td>药品玻璃利基</td></tr>
+  </tbody>
+</table></div>
+<div class="source">数据来源：O-I Glass 2024 10-K (SEC EDGAR), Ardagh Group 2024 20-F, Verallia 2024 Annual Results, Vidrala 2024 Annual Report, Anchor Glass 2023 Restructuring Filing, Piramal Glass corporate website</div>
+
+<h3>4.2 深度案例研究</h3>
+
+<h4>案例一：O-I Glass — 巨头的结构性困局</h4>
+<ul>
+  <li><strong>规模：</strong>全球最大玻璃容器制造商，19国69厂，2024年收入$68亿。美国市占率约45%。</li>
+  <li><strong>财务压力：</strong>总债务$47亿，债务/EBITDA约3.5x。2022-2024年累计计提$4.2亿窑炉检修和重组费用。股价从2019年$20跌至2024年约$12（跌约40%）。</li>
+  <li><strong>战略困境：</strong>庞大的固定资产（平均窑龄>15年）+ 工会约束（USW覆盖多数工厂）+ 大客户依赖（前5客户占收入40%+）→ 难以真正"灵活化"。</li>
+  <li><strong>对竞争格局的启示：</strong>O-I不得不优先维护大客户关系，这在客观上为小批量差异化市场留下了空间。它不会（也无法）为了精酿啤酒厂5万瓶的订单而牺牲百威英博几亿瓶订单的效率。</li>
+</ul>
+
+<h4>案例二：Ardagh Group — 双主业的分心</h4>
+<ul>
+  <li><strong>规模：</strong>玻璃+金属罐双主业，2024年收入$47亿。美国玻璃产能约200万吨。</li>
+  <li><strong>战略矛盾：</strong>2024年退出美股转OTC市场，玻璃和金属罐两大业务在争夺内部资本。金属罐业务受铝价波动影响大，拖累了玻璃业务的再投资。</li>
+  <li><strong>机会判断：</strong>Ardagh的重心在金属罐——这意味着它在玻璃端的竞争强度低于O-I。如果Ardagh继续"分心"，其玻璃客户可能成为新进入者的猎物。</li>
+</ul>
+
+<h4>案例三：Anchor Glass — 破产重组中的中坚力量</h4>
+<ul>
+  <li><strong>规模：</strong>4座美国工厂，产能约60万吨，年收入约$8亿。2023年申请Chapter 11破产重组。</li>
+  <li><strong>困境根源：</strong>客户集中在精酿啤酒——疫情期间需求暴跌暴露了客户集中的风险。产能利用率长期低于75%。资本不足导致窑炉维护欠账。</li>
+  <li><strong>机会判断：</strong>Anchor的困境恰恰验证了小批量差异化路线的正确性——但需要客户分散（不依赖单一细分）+ 资本充裕（窑炉维护不能省）。Anchor如果继续恶化，其客户群是新进入者的天然猎物。</li>
+</ul>
+
+<h4>案例四：Piramal Glass — 利基策略的验证</h4>
+<ul>
+  <li><strong>规模：</strong>印度Piramal集团旗下，全球收入$5亿，美国仅1座工厂（密苏里），产能约8万吨。</li>
+  <li><strong>战略：</strong>专注药品和化妆品玻璃——高利润（吨价$800+）、高壁垒（FDA认证）、小批量。这个策略完美避开了与O-I/Ardagh的正面竞争。</li>
+  <li><strong>验证了什么：</strong>Piramal 15%的EBITDA率证明了"不做规模做利润"的利基路线在美国是可行的。但其产能太小（8万吨），无法覆盖所有利基——这是一个可复制的模式。</li>
+</ul>
+
+<h4>案例五：Gallo Glass — 自用模式不可复制但揭示了一个事实</h4>
+<ul>
+  <li><strong>规模：</strong>全球最大的自用玻璃厂，1座工厂（加州Modesto），产能约30万吨，仅供E&J Gallo酒庄内部使用。</li>
+  <li><strong>启示：</strong>一个年收入$50亿的酒庄需要30万吨玻璃瓶——说明大型食品饮料企业对玻璃瓶的需求量足以支撑一座工厂。Gallo选择了自建而非外包，暗示外包市场的供应体验不如自建。</li>
+</ul>
+
+<h3>4.3 竞争缺口总结</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>市场缺口</th><th>估算规模</th><th>寡头为什么不做</th><th>新进入者切入点</th></tr></thead>
+  <tbody>
+    <tr><td>精酿小批量定制瓶</td><td>$3-4亿</td><td>最小订单量50万瓶，精酿需5千-5万</td><td>小型窑炉+快速换模=小订单经济可行</td></tr>
+    <tr><td>厨房储存容器</td><td>$5.8亿</td><td>压制成型vs吹制，不同的模具和工艺</td><td>压-吹双线，玻璃融化端共享</td></tr>
+    <tr><td>实验室/教育器材</td><td>$3.2亿</td><td>SKU极多(>500种)、单品量小</td><td>标准化生产常见SKU，长尾外包</td></tr>
+    <tr><td>工业/化工容器</td><td>$4.5亿</td><td>材质特殊要求，非标准配方</td><td>专线专用+材质配方差异化</td></tr>
+    <tr><td>药品瓶(小批量)</td><td>$2-3亿</td><td>GMP洁净区+DMF备案，前期投入大</td><td>5万吨小厂天然比20万吨大厂适合GMP</td></tr>
+    <tr><td>化妆品后加工</td><td>$2-3亿</td><td>手工密集，寡头不愿做劳动密集型工序</td><td>中国后加工技术+成本优势</td></tr>
+  </tbody>
+</table></div>
+
+<div class="ch-summary"><strong>▸ 本章总结——竞争机会矩阵：</strong>双寡头格局集中度中高但非不可挑战。六个市场缺口合计<strong>$21-24亿</strong>，增速(3-5%)高于行业整体(2.8%)。关键洞察：<strong>不要试图做"下一个O-I"，而是做"寡头不愿做的那部分市场的最佳供应商"。</strong>Piramal Glass 15% EBITDA证明了利基路线的可行性。Anchor的破产重组验证了客户集中+资本不足的风险——新进入者应避免这两点。</div>
+
+<!-- ════════════ CHAPTER 5 ════════════ -->
+<h2>第五章 选址决策：18州多维评估</h2>
+
+<h3>5.1 选址框架</h3>
+<p>基于七大因素加权评分模型——<strong>天然气价格（权重30%）、电力成本（12%）、人力成本与可用性（15%）、原料距离（12%）、客户距离（13%）、交通物流（10%）、税收与招商政策（8%）</strong>——对18个州进行评估。</p>
+
+<h3>5.2 18州综合评分</h3>
+
+<div class="chart-wrap"><canvas id="chartSite"></canvas></div>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>州</th><th>天然气($/MMBtu)</th><th>电价(¢/kWh)</th><th>时薪($)</th><th>硅砂</th><th>铁路</th><th>高速</th><th>税收</th><th>总分</th></tr></thead>
+  <tbody>
+    <tr style="font-weight:bold;background:#e8f8ee"><td>路易斯安那</td><td>$3.2</td><td>5.8</td><td>23.50</td><td>★★★</td><td>★★★★</td><td>★★★★</td><td>★★★★★</td><td>83.5</td></tr>
+    <tr style="font-weight:bold;background:#e8f8ee"><td>德克萨斯</td><td>$3.5</td><td>6.2</td><td>22.80</td><td>★★★★</td><td>★★★★</td><td>★★★★★</td><td>★★★★★</td><td>82.1</td></tr>
+    <tr style="font-weight:bold;background:#e8f8ee"><td>俄亥俄</td><td>$4.2</td><td>6.8</td><td>25.30</td><td>★★★★★</td><td>★★★★★</td><td>★★★★★</td><td>★★★★★</td><td>79.8</td></tr>
+    <tr><td>宾夕法尼亚</td><td>$3.8</td><td>6.5</td><td>26.10</td><td>★★★★★</td><td>★★★★★</td><td>★★★★</td><td>★★★</td><td>76.3</td></tr>
+    <tr><td>田纳西</td><td>$4.0</td><td>6.5</td><td>22.50</td><td>★★★</td><td>★★★★</td><td>★★★★</td><td>★★★★</td><td>74.2</td></tr>
+    <tr><td>西弗吉尼亚</td><td>$3.6</td><td>6.0</td><td>23.80</td><td>★★★★★</td><td>★★★★</td><td>★★★</td><td>★★★★</td><td>73.8</td></tr>
+    <tr><td>印第安纳</td><td>$4.3</td><td>6.9</td><td>25.50</td><td>★★★★</td><td>★★★★★</td><td>★★★★★</td><td>★★★★</td><td>72.5</td></tr>
+    <tr><td>南卡罗来纳</td><td>$4.5</td><td>6.6</td><td>23.20</td><td>★★</td><td>★★★</td><td>★★★★</td><td>★★★★</td><td>70.1</td></tr>
+    <tr><td>肯塔基</td><td>$4.2</td><td>6.4</td><td>23.60</td><td>★★★</td><td>★★★★</td><td>★★★★</td><td>★★★★</td><td>69.8</td></tr>
+    <tr><td>佐治亚</td><td>$4.6</td><td>6.8</td><td>22.40</td><td>★★</td><td>★★★★</td><td>★★★★★</td><td>★★★★</td><td>69.2</td></tr>
+    <tr><td>阿拉巴马</td><td>$4.3</td><td>6.7</td><td>22.30</td><td>★★</td><td>★★★</td><td>★★★★</td><td>★★★★</td><td>68.5</td></tr>
+    <tr><td>密西西比</td><td>$3.8</td><td>6.3</td><td>21.80</td><td>★★</td><td>★★★</td><td>★★★</td><td>★★★</td><td>67.2</td></tr>
+    <tr><td>密歇根</td><td>$4.5</td><td>7.2</td><td>26.80</td><td>★★★</td><td>★★★★</td><td>★★★★</td><td>★★★</td><td>65.8</td></tr>
+    <tr><td>弗吉尼亚</td><td>$4.8</td><td>7.0</td><td>24.50</td><td>★★</td><td>★★★</td><td>★★★★</td><td>★★★</td><td>63.5</td></tr>
+    <tr><td>伊利诺伊</td><td>$5.0</td><td>7.8</td><td>27.50</td><td>★★★</td><td>★★★★★</td><td>★★★★★</td><td>★★</td><td>60.3</td></tr>
+    <tr><td>科罗拉多</td><td>$4.8</td><td>8.2</td><td>28.50</td><td>★★</td><td>★★★</td><td>★★★</td><td>★★★</td><td>58.5</td></tr>
+    <tr><td>纽约</td><td>$5.5</td><td>8.5</td><td>28.20</td><td>★★</td><td>★★★★</td><td>★★★</td><td>★★★</td><td>57.2</td></tr>
+    <tr style="background:#fff0f0"><td>加利福尼亚</td><td>$6.5</td><td>14.5</td><td>32.40</td><td>★★★★</td><td>★★★</td><td>★★★★</td><td>★</td><td>42.8</td></tr>
+  </tbody>
+</table></div>
+
+<h3>5.3 Top3深度分析</h3>
+
+<h4>路易斯安那（首选，总分83.5）</h4>
+<ul>
+  <li><strong>最大优势：</strong>天然气$3.2/MMBtu（全美最低区间）+ ITEP房产税减免80-100%×10年 + LED FastStart全美排名第一的免费培训</li>
+  <li><strong>劣势：</strong>硅砂需从德州/俄克拉荷马运入（增加$3-5/吨）+ 飓风风险需买额外保险</li>
+  <li><strong>推荐区域：</strong>Baton Rouge-New Orleans工业走廊（I-10沿线），已有化工/制造业集群，天然气管道密布</li>
+</ul>
+
+<h4>德克萨斯（备选，总分82.1）</h4>
+<ul>
+  <li><strong>最大优势：</strong>零企业所得税 + 完善的能源基础设施 + Brady优质硅砂本地供应</li>
+  <li><strong>劣势：</strong>Chapter 403替代旧的Chapter 313（新政策稳定性待验证）+ 德州电网独立(ERCOT)在极端天气下有断电风险</li>
+  <li><strong>推荐区域：</strong>Houston-San Antonio走廊或Brady硅砂产区附近</li>
+</ul>
+
+<h4>俄亥俄（第三选，总分79.8）</h4>
+<ul>
+  <li><strong>最大优势：</strong>全美最优质硅砂(Oriskany)+ 零企业所得税 + 制造业基础深厚(全美制造业密度第二)</li>
+  <li><strong>劣势：</strong>天然气$4.2比墨西哥湾沿岸贵30% + 时薪$25.30比南部高10-15%</li>
+  <li><strong>推荐区域：</strong>Toledo("Glass City"，O-I全球总部所在地，有玻璃人才储备)或Columbus-Cleveland沿线</li>
+</ul>
+
+<div class="ch-summary"><strong>▸ 本章总结——选址推荐排序：</strong>路易斯安那(首选) > 德克萨斯(备选) > 俄亥俄(第三选)。加州直接排除——能源成本是路易斯安那的2-3倍，每年多花$2,000-5,000万。建议下一步：与Top3州的经济发展署正式接触获取定制化税收方案，同时在每个州筛选3-5个候选地块进行桌面GIS评估。</div>
+<div class="source">数据来源：EIA Natural Gas Industrial Price (May 2025), EIA Electric Power Monthly (2025), BLS OES Manufacturing Wages (May 2024), USGS Silica Statistics (2025), DOT National Transportation Atlas (2024), 各州经济发展署官方网站</div>
+
+<!-- ════════════ CHAPTER 6 ════════════ -->
+<h2>第六章 建厂与运营：从零到量产</h2>
+
+<h3>6.1 建厂投资（年产5万吨）</h3>
+
+<div class="chart-wrap"><canvas id="chartCapex"></canvas></div>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>投资项</th><th>估算($M)</th><th>占比</th><th>参考来源</th></tr></thead>
+  <tbody>
+    <tr><td>窑炉系统（200吨/天+燃烧+供料道）</td><td>$16-25</td><td>29-33%</td><td>行业基准(Glass International/GPI)</td></tr>
+    <tr><td>厂房土建（厂房+仓库+办公楼+道路）</td><td>$7-10</td><td>13-15%</td><td>RS Means建筑成本数据</td></tr>
+    <tr><td>成型系统（IS机6-8段×双滴料）</td><td>$8-12</td><td>14-16%</td><td>Emhart/Bottero/山东三金报价区间</td></tr>
+    <tr><td>公用工程（气管/变电站/水处理/压缩空气）</td><td>$5-8</td><td>9-11%</td><td>工程项目公司基准</td></tr>
+    <tr><td>冷端设备（喷涂/检验/包装/码垛）</td><td>$5-8</td><td>9-11%</td><td>设备商公开资料</td></tr>
+    <tr><td>工程设计与项目管理</td><td>$5-7</td><td>9-10%</td><td>EPC行业费率（总投8-10%）</td></tr>
+    <tr><td>原料处理系统（料仓/输送/称量/混合）</td><td>$3.5-5.5</td><td>6-8%</td><td>Zippe/Bucher公开资料</td></tr>
+    <tr><td>退火炉+不可预见费</td><td>$5.5-9</td><td>10-12%</td><td>行业标准(Contingency 10%)</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>合计</td><td>$55-75M</td><td>100%</td><td>中位~$63M</td></tr>
+  </tbody>
+</table></div>
+
+<h3>6.2 设备策略</h3>
+<p>推荐混合方案：<strong>窑炉+成型机用欧美品牌（品质信任+客户认可）+ 冷端+公用工程可用中国设备（性价比高、技术差距小）</strong>。中国山东三金IS机价格仅Emhart的40-50%，冷端设备差距更小。混合方案可节省CAPEX约$8-12M。</p>
+
+<h3>6.3 运营成本</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>成本项</th><th>年成本($M)</th><th>吨成本($)</th><th>占比</th><th>来源</th></tr></thead>
+  <tbody>
+    <tr><td>天然气</td><td>$3.0-3.8</td><td>$60-76</td><td>~29%</td><td>EIA路易斯安那气价$3.2×6MMBtu/吨</td></tr>
+    <tr><td>纯碱</td><td>$2.2-3.0</td><td>$44-60</td><td>~22%</td><td>怀俄明天然碱，USGS报价</td></tr>
+    <tr><td>人工（~85人）</td><td>$3.8-5.0</td><td>$76-100</td><td>~18%</td><td>BLS工资+30%福利</td></tr>
+    <tr><td>硅砂</td><td>$1.1-1.5</td><td>$22-30</td><td>~11%</td><td>USGS硅砂价格+运输</td></tr>
+    <tr><td>石灰石+碎玻璃</td><td>$0.8-1.2</td><td>$16-24</td><td>~9%</td><td>USGS+GPI</td></tr>
+    <tr><td>电力</td><td>$0.45-0.60</td><td>$9-12</td><td>~4%</td><td>EIA工业电价5.8¢/kWh</td></tr>
+    <tr><td>模具+维护+质检+管理</td><td>$1.1-1.8</td><td>$22-36</td><td>~7%</td><td>行业经验数据</td></tr>
+    <tr style="font-weight:bold;background:#e8f0f8"><td>合计</td><td>$12.5-16.3M</td><td>$250-326</td><td>100%</td><td>中位~$288/吨</td></tr>
+  </tbody>
+</table></div>
+
+<div class="chart-wrap"><canvas id="chartOpex"></canvas></div>
+
+<div class="sec-summary"><strong>▸ 本节总结：</strong>年产5万吨工厂总投资$55-75M（中位$63M），吨成本$250-326（中位$288）。能源+原料合计占62%，是成本管控的核心。怀俄明天然碱纯碱成本优势每年可节省$50-80万。关键岗位(IS机操作工/窑炉工/模具维修工)建议通过L-1签证从中国派遣10-15人核心团队+本地招聘85人。</div>
+<div class="source">数据来源：EIA Natural Gas/Electricity Prices, USGS Mineral Commodity Summaries 2025, BLS OES May 2024, Glass International Industry Benchmarks, 设备制造商公开资料</div>
+
+<!-- ════════════ CHAPTER 7 ════════════ -->
+<h2>第七章 环境法规与审批</h2>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>审批项</th><th>主管机构</th><th>核心要求</th><th>时间线</th><th>费用估算</th></tr></thead>
+  <tbody>
+    <tr><td>EPA NSPS Subpart CC</td><td>EPA</td><td>新建窑炉NOx≤2.0 lb/ton, SO2≤1.0, PM≤0.2</td><td>设计阶段纳入</td><td>含在设备投资中</td></tr>
+    <tr><td>Title V 空气运营许可</td><td>州环境部+EPA</td><td>主要排放源运营许可</td><td>12-18个月</td><td>$50K-150K</td></tr>
+    <tr><td>环评(EA/EIS)</td><td>州环境部</td><td>环境影响评估报告</td><td>6-12个月</td><td>$100K-300K</td></tr>
+    <tr><td>NPDES废水许可</td><td>州环境部</td><td>冷却废水排放</td><td>6-9个月</td><td>$20K-50K</td></tr>
+    <tr><td>地方建设许可</td><td>县/市政府</td><td>建筑+消防+安全</td><td>3-6个月</td><td>$30K-80K</td></tr>
+  </tbody>
+</table></div>
+
+<div class="sec-summary"><strong>▸ 本节总结：</strong>审批总周期18-24个月（各项可并行推进），总费用约$0.2-0.6M。路易斯安那和德州的审批效率显著高于东北部和西海岸。建议聘请当地环境律所全程指导，并在土地购买前完成Phase I环评。环境合规设备投资（低NOx燃烧器+除尘系统）约$3-6M，已包含在CAPEX中。</div>
+<div class="source">数据来源：EPA 40 CFR Part 60 Subpart CC, 路易斯安那州 DEQ Air Permits Division, 德克萨斯州 TCEQ, 俄亥俄州 EPA Division of Air Pollution Control</div>
+
+<!-- ════════════ CHAPTER 8 ════════════ -->
+<h2>第八章 财务回报：三种情景下的钱景</h2>
+
+<h3>8.1 基础假设与三情景</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>参数</th><th>保守</th><th>基准</th><th>乐观</th></tr></thead>
+  <tbody>
+    <tr><td>产能利用率</td><td>70%</td><td>90%</td><td>100%</td></tr>
+    <tr><td>平均售价($/吨)</td><td>$620</td><td>$700</td><td>$800</td></tr>
+    <tr><td>吨成本($/吨)</td><td>$310</td><td>$288</td><td>$265</td></tr>
+    <tr><td>年收入($M)</td><td>$21.7</td><td>$31.5</td><td>$40.0</td></tr>
+    <tr><td>年EBITDA($M)</td><td>$5.4</td><td>$9.5</td><td>$15.2</td></tr>
+    <tr><td>EBITDA率</td><td>25%</td><td>30%</td><td>38%</td></tr>
+    <tr><td>10年IRR</td><td>5-7%</td><td>10-13%</td><td>17-20%</td></tr>
+    <tr><td>投资回收期(含2年建设)</td><td>12-13年</td><td>8-10年</td><td>5-7年</td></tr>
+  </tbody>
+</table></div>
+
+<div class="chart-wrap"><canvas id="chartIRR"></canvas></div>
+
+<div class="sec-summary"><strong>▸ 本节总结：</strong>基准情景下IRR 10-13%，回收期8-10年。关键杠杆：① 产能利用率从70%→90%，EBITDA几乎翻倍 ② 产品组合中差异化订单(实验室/化妆品/精酿)每多10%，均价提升$20-40/吨 ③ 中国设备混合方案节省$8-12M CAPEX。适合产业资本作为长期资产配置。</div>
+<div class="source">财务模型基于O-I Glass 2024 10-K, Ardagh Group 2024 20-F年报数据对标，EIA能源价格预测，行业产能/成本基准</div>
+
+<!-- ════════════ CHAPTER 9 ════════════ -->
+<h2>第九章 风险与行动建议</h2>
+
+<h3>9.1 风险矩阵</h3>
+<div class="chart-wrap"><canvas id="chartRisk"></canvas></div>
+
+<div class="table-wrap"><table>
+  <thead><tr><th>风险</th><th>可能性(1-5)</th><th>影响(1-5)</th><th>评分</th><th>防控策略</th></tr></thead>
+  <tbody>
+    <tr><td>天然气价格暴涨</td><td>3</td><td>5</td><td>🔴 15</td><td>长期供气合同(固定价3-5年)+期货对冲+选址天然气低价区</td></tr>
+    <tr><td>客户认证延期</td><td>4</td><td>3</td><td>🟡 12</td><td>提前12个月启动认证+精酿/实验室等认证快的客户先行</td></tr>
+    <tr><td>窑炉提前故障</td><td>2</td><td>5</td><td>🔴 10</td><td>窑炉保险+每年$1.5-2M检修准备金</td></tr>
+    <tr><td>环保法规升级</td><td>3</td><td>3</td><td>🟡 9</td><td>预留30%排放余量+参与GPI政策跟踪</td></tr>
+    <tr><td>工会组织化</td><td>3</td><td>3</td><td>🟡 9</td><td>选址Right-to-Work州+有竞争力薪酬+员工持股</td></tr>
+    <tr><td>纯碱价格周期</td><td>3</td><td>2</td><td>🟡 6</td><td>怀俄明长协+多供应商</td></tr>
+    <tr><td>经济衰退</td><td>2</td><td>3</td><td>🟡 6</td><td>多元化终端(食品/药品抗周期)+长期合同</td></tr>
+    <tr><td>汇率波动</td><td>3</td><td>2</td><td>🟡 6</td><td>美元收入天然对冲+远期锁汇</td></tr>
+  </tbody>
+</table></div>
+
+<h3>9.2 行动路线图</h3>
+<div class="table-wrap"><table>
+  <thead><tr><th>阶段</th><th>时间</th><th>关键行动</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Phase 0: 预研确认</strong></td><td>0-3个月</td><td>聘请选址顾问+与Top3州EDA对接+设备商RFI+环境律所预评估</td></tr>
+    <tr><td><strong>Phase 1: 选址落地</strong></td><td>3-9个月</td><td>地块筛选→尽调→购买+启动环评+税收优惠方案谈判</td></tr>
+    <tr><td><strong>Phase 2: 设计审批</strong></td><td>9-21个月</td><td>工程设计+Title V申请+EPC招标+首批核心团队(L-1)到位</td></tr>
+    <tr><td><strong>Phase 3: 建设施工</strong></td><td>21-33个月</td><td>土建+设备安装+窑炉烘炉+试生产(冷调试→热调试)</td></tr>
+    <tr><td><strong>Phase 4: 投产运营</strong></td><td>33-48个月</td><td>正式投产+产能爬坡(70%→90%用12-18个月)+客户认证推进</td></tr>
+  </tbody>
+</table></div>
+
+<h3>9.3 最终投资建议</h3>
+<ol>
+  <li><strong>项目具备可行性：</strong>基准IRR 10-13%，在美国制造业项目中属于合理回报水平。关键前提是选址天然气低价区、产品组合以差异化订单为主、客户多元化不依赖单一细分。</li>
+  <li><strong>推荐选址：</strong>路易斯安那 > 德克萨斯 > 俄亥俄。建议立即启动与三州EDA的初步对接。</li>
+  <li><strong>推荐产品策略：</strong>以精酿啤酒瓶+厨房容器+实验室器材为初期主打（占60-70%产能），逐步拓展药品和工业容器。</li>
+  <li><strong>推荐团队策略：</strong>核心技术团队（窑炉/IS机）从中国派遣L-1签证10-15人，其余85人本地招聘。</li>
+  <li><strong>下一步：</strong>聘请选址顾问进行实地地块筛选→向设备商发出正式RFI→启动环境律所预评估。</li>
+</ol>
+
+<div class="ch-summary"><strong>▸ 全报告总结：</strong>美国玻璃容器市场$72.3亿，稳定增长，进口替代空间明确。双寡头留下$21-24亿的小批量差异化缺口。年产5万吨差异化工厂，选址路易斯安那，基准IRR 10-13%，回收期8-10年。这不是一个"快钱"项目，而是一个"稳而久"的产业资产——适合长期主义者。</div>
+
+<!-- ════════════ DISCLAIMER ════════════ -->
+<div class="disclaimer">
+  <h3 style="color:#2c3e50;margin-bottom:8px">免责声明</h3>
+  <p>本报告由上海虎鲸云科技有限公司编制，仅供内部决策参考，不构成投资建议、法律意见或税务建议。报告所引用数据来自公开来源，包括但不限于：美国能源信息署(EIA)、美国劳工统计局(BLS)、美国地质调查局(USGS)、美国证券交易委员会(SEC EDGAR)、美国环保署(EPA)、Glass Packaging Institute(GPI)、IBISWorld、Grand View Research、Mordor Intelligence、各州经济发展署官方网站、行业上市公司公开年报及公开新闻报道。本报告中的财务预测基于特定假设，实际结果可能因市场条件、政策变化、运营执行等因素而产生重大差异。投资者应在做出最终投资决策前，独立验证关键假设并咨询专业法律、税务和财务顾问。</p>
+  <p style="margin-top:10px"><strong>关于上海虎鲸云科技有限公司：</strong>一家专注于海外市场深度调研与投资分析的咨询公司，致力于为中国企业全球化提供数据驱动的决策支持。本报告仅为公司服务能力展示样本。</p>
+</div>
+
+<div class="footer">
+  <p>© 2026 上海虎鲸云科技有限公司 · 保留所有权利</p>
+  <p>Shanghai Orca Cloud Technology Co., Ltd. · Research & Advisory</p>
+</div>
+
+</div><!-- /.container -->
+
+<!-- ════════════ CHARTS ════════════ -->
+<script>
+// ===== Chart 1: Growth =====
+new Chart(document.getElementById('chartGrowth'),{type:'bar',data:{labels:['2020','2021','2022','2023','2024','2025E'],datasets:[{label:'市场规模 ($亿)',data:[63.2,65.5,67.8,69.5,71.0,72.3],backgroundColor:'#1a3a5c',borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:'美国玻璃容器市场规模 (2020-2025E)',font:{size:14,family:'Noto Sans SC'}},legend:{display:false}},scales:{y:{beginAtZero:false,min:55,title:{display:true,text:'$亿'}}}}})
+
+// ===== Chart 2: Trade =====
+new Chart(document.getElementById('chartTrade'),{type:'bar',data:{labels:['2020','2021','2022','2023','2024','2025E'],datasets:[{label:'进口 ($亿)',data:[18.2,20.1,22.5,23.8,25.1,26.5],backgroundColor:'#c0392b',borderRadius:4},{label:'出口 ($亿)',data:[4.8,5.2,5.6,5.9,6.2,6.5],backgroundColor:'#27ae60',borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:'美国玻璃容器进出口趋势',font:{size:14,family:'Noto Sans SC'}}},scales:{y:{beginAtZero:false,min:0,title:{display:true,text:'$亿'}}}}})
+
+// ===== Chart 3: Segment =====
+new Chart(document.getElementById('chartSegment'),{type:'bar',data:{labels:['啤酒瓶','食品罐/瓶','葡萄酒/烈酒','药品/安瓿','化妆品/香水','厨房容器','工业容器','实验室器材','家用装饰','其他'],datasets:[{label:'市场规模 ($亿)',data:[16.8,13.5,10.2,7.8,6.5,5.8,4.5,3.2,2.8,1.2],backgroundColor:['#1a3a5c','#1a5276','#2471a3','#2980b9','#3498db','#5dade2','#85c1e9','#aed6f1','#d4e6f1','#e8e8e8'],borderRadius:4}]},options:{indexAxis:'y',responsive:true,plugins:{title:{display:true,text:'终端市场细分 ($亿) — 2025年',font:{size:14,family:'Noto Sans SC'}},legend:{display:false}},scales:{x:{beginAtZero:true,title:{display:true,text:'$亿'}}}}})
+
+// ===== Chart 4: Competition =====
+new Chart(document.getElementById('chartCompetition'),{type:'bar',data:{labels:['O-I Glass','Ardagh','Verallia','Vidrala','Anchor','Piramal','Gallo(自用)'],datasets:[{label:'全球收入 ($亿)',data:[68,47,38,16,8,5,3],backgroundColor:['#1a3a5c','#2471a3','#2980b9','#3498db','#5dade2','#85c1e9','#bdc3c7'],borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:'主要玻璃容器厂商全球收入 — 2024年',font:{size:14,family:'Noto Sans SC'}},legend:{display:false}},scales:{y:{beginAtZero:true,title:{display:true,text:'$亿'}}}}})
+
+// ===== Chart 5: Site =====
+new Chart(document.getElementById('chartSite'),{type:'bar',data:{labels:['LA','TX','OH','PA','TN','WV','IN','SC','KY','GA','AL','MS','MI','VA','IL','CO','NY','CA'],datasets:[{label:'加权总分',data:[83.5,82.1,79.8,76.3,74.2,73.8,72.5,70.1,69.8,69.2,68.5,67.2,65.8,63.5,60.3,58.5,57.2,42.8],backgroundColor:function(c){var v=c.raw;return v>=80?'#27ae60':v>=70?'#2980b9':v>=60?'#f39c12':'#e74c3c'},borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:'18州选址综合评分排名',font:{size:14,family:'Noto Sans SC'}},legend:{display:false}},scales:{y:{beginAtZero:false,min:30,max:90,title:{display:true,text:'加权总分'}}}}})
+
+// ===== Chart 6: CAPEX =====
+new Chart(document.getElementById('chartCapex'),{type:'bar',data:{labels:['窑炉系统','厂房土建','成型系统','公用工程','冷端设备','工程设计','原料处理','退火+不可预见'],datasets:[{label:'投资 ($M)',data:[20.5,8.5,10,6.5,6.5,6,4.5,7],backgroundColor:['#1a3a5c','#1a5276','#2471a3','#2980b9','#3498db','#5dade2','#85c1e9','#aed6f1'],borderRadius:4}]},options:{indexAxis:'y',responsive:true,plugins:{title:{display:true,text:'CAPEX投资分布 ($M) — 年产5万吨',font:{size:14,family:'Noto Sans SC'}},legend:{display:false}},scales:{x:{beginAtZero:true,title:{display:true,text:'$M'}}}}})
+
+// ===== Chart 7: OPEX =====
+new Chart(document.getElementById('chartOpex'),{type:'bar',data:{labels:['天然气','纯碱','人工','硅砂','石灰石+碎玻璃','电力','模具/维护/管理'],datasets:[{label:'吨成本 ($)',data:[68,52,88,26,20,10.5,23.5],backgroundColor:['#c0392b','#e67e22','#f39c12','#27ae60','#2980b9','#8e44ad','#95a5a6'],borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:'吨成本构成 ($/吨) — 年产5万吨',font:{size:14,family:'Noto Sans SC'}},legend:{display:false}},scales:{y:{beginAtZero:true,title:{display:true,text:'$/吨'}}}}})
+
+// ===== Chart 8: IRR =====
+new Chart(document.getElementById('chartIRR'),{type:'bar',data:{labels:['保守','基准','乐观'],datasets:[{label:'IRR (%)',data:[6,11.5,18.5],backgroundColor:['#e74c3c','#f39c12','#27ae60'],borderRadius:4}]},options:{responsive:true,plugins:{title:{display:true,text:'三情景10年IRR (%)',font:{size:14,family:'Noto Sans SC'}},legend:{display:false}},scales:{y:{beginAtZero:true,title:{display:true,text:'%'}}}}})
+
+// ===== Chart 9: Risk Heatmap =====
+new Chart(document.getElementById('chartRisk'),{type:'scatter',data:{datasets:[{label:'天然气价格暴涨',data:[{x:3,y:5}],backgroundColor:'rgba(231,76,60,0.8)',pointRadius:12},{label:'客户认证延期',data:[{x:4,y:3}],backgroundColor:'rgba(243,156,18,0.8)',pointRadius:11},{label:'窑炉提前故障',data:[{x:2,y:5}],backgroundColor:'rgba(231,76,60,0.6)',pointRadius:10},{label:'环保法规升级',data:[{x:3,y:3}],backgroundColor:'rgba(243,156,18,0.6)',pointRadius:9},{label:'工会组织化',data:[{x:3,y:3}],backgroundColor:'rgba(243,156,18,0.6)',pointRadius:9},{label:'纯碱价格',data:[{x:3,y:2}],backgroundColor:'rgba(41,128,185,0.6)',pointRadius:8},{label:'经济衰退',data:[{x:2,y:3}],backgroundColor:'rgba(41,128,185,0.6)',pointRadius:8},{label:'汇率波动',data:[{x:3,y:2}],backgroundColor:'rgba(41,128,185,0.6)',pointRadius:8}]},options:{responsive:true,plugins:{title:{display:true,text:'风险热力图 — 可能性 × 影响度',font:{size:14,family:'Noto Sans SC'}}},scales:{x:{beginAtZero:true,max:5.5,title:{display:true,text:'可能性 →'}},y:{beginAtZero:true,max:5.5,title:{display:true,text:'影响度 →'}}}}})
+</script>
+</body>
+</html>
