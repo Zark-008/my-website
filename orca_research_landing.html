@@ -215,14 +215,44 @@ footer .f-company{font-size:0.85em;color:#64748b}
 .mini-bar.gold{background:rgba(212,175,55,0.5)}
 .mini-bar.wide{width:14px}
 
-@media(max-width:640px){
-  section{padding:64px 0}
-  .hero{padding:100px 0 56px}
-  .hero h1{font-size:1.7em}
-  .section-title{font-size:1.5em}
-  .hero .stats-row{gap:24px;margin-top:28px}
-  .process-row{flex-direction:column}
+@media(max-width:768px){
+  .container,.container-sm{max-width:100%!important;padding:0 14px!important}
+  body{font-size:14px}
+  section{padding:40px 0}
+  .hero{padding:120px 0 48px;min-height:auto}
+  .hero h1{font-size:1.6em;line-height:1.25}
+  .hero .hero-sub{font-size:.9em}
+  .hero .hero-badge{font-size:.62em;padding:5px 14px}
+  .hero .stats-row{gap:16px;margin-top:24px}
+  .hero .stat-item .num{font-size:1.3em}.hero .stat-item .lbl{font-size:.68em}
+  .btn{padding:12px 24px;font-size:12px;width:100%;justify-content:center}
+  .btn-ghost{width:auto}
+  .section-title{font-size:1.35em}
+  .section-sub{font-size:.85em}
+  .kfc-grid{grid-template-columns:repeat(2,1fr)!important;gap:8px}
+  .kfc{padding:14px 12px}.kfc .num{font-size:1.2em}.kfc .label{font-size:.7em}
+  .pain-grid,.scene-grid,.case-grid,.testimonial-grid,.method-grid{grid-template-columns:1fr!important}
+  .intro-grid{grid-template-columns:1fr!important}
+  .intro-stats{grid-template-columns:repeat(2,1fr)!important;gap:8px}
+  .intro-stat{padding:14px}.intro-stat .is-num{font-size:1.2em}
+  .process-row{flex-direction:column!important}
+  .process-step{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);padding:20px 16px}
+  .comp-table{font-size:.72em}.comp-table th,.comp-table td{padding:8px 6px}
+  .report-showcase-grid{grid-template-columns:1fr!important}
+  .report-cover{height:100px}.rc-icon{font-size:28px!important}
+  .cta-section h2{font-size:1.4em}
+  .nav-links{display:none}
+  .nav-company{font-size:.6em}
+  table{font-size:.75em}thead th{padding:6px 8px}tbody td{padding:6px 8px}
+  p,li{font-size:.9em}
 }
+@media(max-width:480px){
+  .kfc-grid{grid-template-columns:1fr!important}
+  .intro-stats{grid-template-columns:1fr!important}
+  .hero h1{font-size:1.4em}
+  .hero .stats-row{flex-direction:column;gap:8px}
+}
+.nav-mobile-menu{display:none}@media(max-width:768px){.nav-mobile-menu{display:block;background:none;border:none;color:#D4AF37;font-size:1.5em;cursor:pointer;padding:4px}.nav-links.show{display:flex!important;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:rgba(6,13,23,.95);padding:16px 28px;gap:12px;border-bottom:1px solid rgba(255,255,255,.06);z-index:100}.nav-links.show a{font-size:.9em;padding:8px 0}.case-grid{grid-template-columns:repeat(2,1fr)!important}.case-card{padding:12px}.case-card .case-title{font-size:.76em}.region-cloud span{font-size:.68em;padding:4px 8px}.comp-wrap{font-size:.7em}.comp-table th,.comp-table td{padding:6px 4px}.report-body{padding:14px}.report-body .rc-title{font-size:.82em}.report-body .rc-desc{font-size:.72em}.cta-box{flex-direction:column;align-items:center;text-align:center}.cta-box .cta-info{text-align:center}}
 </style>
 </head>
 <body>
@@ -235,7 +265,8 @@ footer .f-company{font-size:0.85em;color:#64748b}
 <!-- ════════════ NAV ════════════ -->
 <nav class="nav">
   <a href="#" class="nav-brand"><span>Orca</span>&thinsp;Cloud</a>
-  <div class="nav-links">
+  <button class="nav-mobile-menu" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button>
+  <div class="nav-links" id="mobileNav">
     <a href="#services">服务能力</a>
     <a href="#cases">案例研究</a>
     <a href="#about">关于我们</a>
